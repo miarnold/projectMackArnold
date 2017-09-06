@@ -2,7 +2,7 @@
 
 | Date | Task | Hours | Notes|
 |------|------|-------|------|
-| 1/14/16| Course set up on Windows| 2 | |
-| 1/18/16| Set up project repository, write problem statement, time log, technologies used| 2 | |
-| 1/19/16 | Exercise for week 1  | 1  |   | 
-| 1/22/16 | Readings for week 1 and 2| 2.5 | |
+| 8/30/17| Class work and setup| 4 | |
+| 9/5/17| watching videos for week 2 | 3 | |
+| 9/6/17 | finishing exercise 1 and doing week 2 actvities  | 7  |   | 
+

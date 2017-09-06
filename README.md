@@ -12,6 +12,6 @@ Hopefully you will know how many or you can look up how many highway miles you u
 how many city miles you use, and the application will tell you from gas prices and milage,
 how much the company owes you and then it will email them the recipt or you can print it out.
 
-some of the services i was thinking about using were things like google maps for
-mapping out where you went and how far you went, and another one i was thinking about was edmunds, edmunds
-is an API that you use to get all vehicle infomation, from pictures to gasmileage.
+Some of the services I was thinking about using were things like google maps for
+mapping out where you went and how far you went, and another one I was thinking about was edmunds, 
+edmunds is an API that you use to get all vehicle information, from pictures to gas mileage.

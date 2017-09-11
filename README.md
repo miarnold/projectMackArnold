@@ -15,3 +15,26 @@ how much the company owes you and then it will email them the recipt or you can 
 Some of the services I was thinking about using were things like google maps for
 mapping out where you went and how far you went, and another one I was thinking about was edmunds, 
 edmunds is an API that you use to get all vehicle information, from pictures to gas mileage.
+
+### Project Technologies/Techniques 
+
+* Security/Authentication
+  * Admin role: create/read/update/delete (crud) of all data
+  * User role: submit Commuter reports
+  * All: quick view to see what the site does
+* Database (MySQL and Hibernate)
+  * Store users and roles
+  * Store trail information
+* Web Services or APIs
+  * Google Maps for Commuter Travels
+  * Edmunds for car information
+* Logging
+  * Configurable logging using Log4J. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
+* Site and database hosted on AWS
+* Unit Testing
+  * JUnit tests to achieve 80% code coverage 
+  
+  ### [Project Plan](projectPlan.md)
+  
+  ### [Time Log](timelog.md) 
+  ### [Journal](journal.md)

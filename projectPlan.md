@@ -20,7 +20,7 @@
 more detail.
 
 ### Week 3
-- [ ] begin JSPs
+- [ ] begin JSPs(remember to add gas prices when doing the report)
 - [ ] Add in bootstrap(maybe)
 - [ ] Create database and all tables/columns locally(needs to be done)
 - [ ] Time log entries

@@ -8,5 +8,5 @@
 | 9/9/17 | watching week 3 video  | 1  |   |
 | 9/11/17 | Getting my project ready for the first checkpoint  | 2  |   |
 | 9/11/17 | completing the exercise two  | 1  |   |
-| 9/13/17 | finishing up the project for the check point and doing all the wireFrames  | 1  |   |
+| 9/13/17 | Finishing up the project for the check point and doing all the wireFrames  | 1  |   |
 

@@ -37,7 +37,7 @@ individual research topic: ???
   * Configurable logging using Log4J. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
 * Site and database hosted on AWS
 * Unit Testing
-  * JUnit tests to achieve 80% code coverage 
+  * JUnit tests to achieve 100% code coverage for the tests, but for the line covereage i want at least 80% 
   
   ### [Project Plan](projectPlan.md)
   

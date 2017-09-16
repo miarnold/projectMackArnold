@@ -1,0 +1,21 @@
+.headerDiv{
+    padding:3em;
+    text-align:center;
+    color: #67c8ff;
+}
+
+
+.sidebar {
+    margin-top:5em;
+    width: 178px;
+    height: 100%;
+    float:left;
+}
+
+.topOutline{
+    border: thin;
+}
+
+body{
+    background:Gold;
+}

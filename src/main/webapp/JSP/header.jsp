@@ -13,7 +13,7 @@
 <header>
     <div class="topOutline">
         <div class="headerDiv">
-            <h1>Welcome to Commuters Relief</h1>
+            <h1><subject>${subject}</subject></h1>
             <h2>By:Mack Arnold</h2>
         </div>
     </div>

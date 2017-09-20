@@ -1,7 +1,7 @@
 
 <div class="sidebar">
     <ul>
-        <li><a href="/java/edu.matc/">Home</a></li>
+        <li><a href="/java/edu.matc/controller/Index">Home</a></li>
         <li><a href="/java/edu.matc/">My Cars</a></li>
         <li><a href="/java/edu.matc/">My Reports</a></li>
         <li><a href="/java/edu.matc/">Google Maps</a></li>

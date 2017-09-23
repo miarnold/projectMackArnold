@@ -31,12 +31,13 @@ public class UserHibernateDaoTest {
     @Test
     public void updateUserTest() throws Exception {
         listOfUsers = userDao.getAllUsers().size();
-        user = userDao.selectUser("Samie");
-        user.setUserName("carl");
+        user = userDao.selectUser("aaron");
+        logger.error(user);
+        user.setUserPass("tool");
         logger.error(user);
         userDao.updateUser(user);
         assertEquals("List size has changed", listOfUsers, userDao.getAllUsers().size());
-        assertEquals("Update changes failed to save", user.toString(), userDao.selectUser("mack").toString());
+        assertEquals("Update changes failed to save", user.toString(), userDao.selectUser("aaron").toString());
     }
 
     @Test
@@ -48,7 +49,7 @@ public class UserHibernateDaoTest {
 
     @Test
     public void deleteUserTest() throws Exception {
-        userDao.deleteUser("Sammy");
+        userDao.deleteUser("tool");
         assertEquals("Incorrect size of results", listOfUsers - 1, userDao.getAllUsers().size());
     }
 

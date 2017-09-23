@@ -31,30 +31,30 @@ public class UserHibernateDaoTest {
     @Test
     public void updateUserTest() throws Exception {
         listOfUsers = userDao.getAllUsers().size();
-        String userName = "Aaron";
-        user = userDao.selectUser(userName);
-        user.setUserName("Sam");
+        user = userDao.selectUser("Samie");
+        user.setUserName("carl");
+        logger.error(user);
         userDao.updateUser(user);
         assertEquals("List size has changed", listOfUsers, userDao.getAllUsers().size());
-        assertEquals("Update changes failed to save", user.toString(), userDao.selectUser(userName).toString());
+        assertEquals("Update changes failed to save", user.toString(), userDao.selectUser("mack").toString());
     }
 
     @Test
     public void selectUserTest() throws Exception {
-        user = userDao.selectUser("Aaron");
+        user = userDao.selectUser("aaron");
         assertNotNull(user);
         assertEquals("wrong password returned", "briggs", user.getUserPass());
     }
 
     @Test
     public void deleteUserTest() throws Exception {
-        userDao.deleteUser("Sam");
+        userDao.deleteUser("Sammy");
         assertEquals("Incorrect size of results", listOfUsers - 1, userDao.getAllUsers().size());
     }
 
     @Test
     public void addUserTest() {
-        user = new User( "Sam", "Soper");
+        user = new User( "Samie", "Soper");
 
         userDao.addUser(user);
         assertEquals("Incorrect size of results", listOfUsers + 1, userDao.getAllUsers().size());

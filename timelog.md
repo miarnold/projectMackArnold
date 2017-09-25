@@ -8,5 +8,8 @@
 | 9/9/17 | watching week 3 video  | 1  |   |
 | 9/11/17 | Getting my project ready for the first checkpoint  | 2  |   |
 | 9/11/17 | completing the exercise two  | 1  |   |
-| 9/13/17 | Finishing up the project for the check point and doing all the wireFrames  | 1  |   |
-
+| 9/16/17 | working on project and getting exercise done  | 5  |   |
+| 9/18/17 | trying to get servlets to show jsps  | 4  |   |
+| 9/20/17 | working on this weeks exercise and getting some work done on project  | 5  |   |
+| 9/22/17 | finishing up this weeks exercise  | 2  |   |
+| 9/25/17 | creating javabeans and daos for tables in project  | 3  |   |

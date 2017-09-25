@@ -11,16 +11,26 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "cars")
 public class Cars {
-
+    @Id
+    @Column(name = "carID")
     private int car_id;
+    @Column(name = "vehicle_type")
     private String vehicleType;
+    @Column(name = "vehicle_category")
     private String vehicleCategory;
+    @Column(name = "vehicle_size")
     private String vehicleSize;
+    @Column(name = "fuel_type")
     private String fuelType;
+    @Column(name = "driving_wheels")
     private String drivingWheels;
+    @Column(name = "highway_miles")
     private int highwayMiles;
+    @Column(name = "city_miles")
     private int cityMiles;
+    @Column(name = "year_of_make")
     private int yearOfMake;
+    @Column(name = "VIN")
     private int vin;
 
 

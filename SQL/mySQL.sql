@@ -64,3 +64,16 @@ CREATE TABLE cars
   city_miles       INT         NOT NULL,
   year_of_make      INT         NULL
 );
+
+CREATE TABLE routes
+(
+  route_id int AUTO_INCREMENT PRIMARY KEY,
+  Driver_name varchar(30) NOT NULL,
+  number_of_miles int NOT NULL,
+  number_of_high_way_miles int,
+  number_of_city_miles int,
+  which_car varchar(20) NOT NULL,
+  date date NOT NULL,
+  gas_price varchar(10) NOT NULL,
+  notes varchar(100)
+);

@@ -7,39 +7,39 @@
 - [X] List technologies and how they will be used
 - [X] Time log entries
 - [X] Begin project plan
-- [ ] Commit, pull, push
+- [X] Commit, pull, push
 
 ### Week 2
-- [ ] Document application flow - wireframes have clickable links in the online version.
-- [ ] Complete screen design (on paper)
-- [ ] Create project structure in IntelliJ
+- [X] Document application flow - wireframes have clickable links in the online version.
+- [X] Complete screen design (on paper)
+- [X] Create project structure in IntelliJ
 - [X] Add project to repository
 - [ ] Complete database design (needs to be done)
 - [ ] Begin creating JSPs (needs to be done)
-- [ ] Time log entries
+- [X] Time log entries
 - [X] Complete project plan. Based on the design should be able to lay out 
 more detail.
-- [ ] Commit, pull, push
+- [X] Commit, pull, push
 
 ### Week 3
 - [ ] begin JSPs(remember to add gas prices when doing the report)
 - [ ] Add in bootstrap(maybe)
 - [ ] Create database and all tables/columns locally(needs to be done)
-- [ ] Time log entries
-- [ ] Determine independent research topic(needs to be done)
-- [ ] Set up logging(need a project first)
-- [ ] Set up unit testing(need a project structure first)
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [X] Determine independent research topic(needs to be done)
+- [X] Set up logging(need a project first)
+- [X] Set up unit testing(need a project structure first)
+- [X] Commit, pull, push
 ### Week 4
-- [ ] Add Hibernate config
-- [ ] Create DAO for user crud
-- [ ] Add unit tests for DAO
+- [X] Add Hibernate config
+- [X] Create DAO for user crud
+- [X] Add unit tests for DAO
 - [ ] Add user login  
 - [ ] Add user registration
-- [ ] Time log entries
-- [ ] Add Maven for building
+- [X] Time log entries
+- [X] Add Maven for building
 - [ ] Add entities for remaining tables
-- [ ] Commit, pull, push
+- [X] Commit, pull, push
 ### Week 5
 
 - [ ] Time log entries
@@ -58,6 +58,7 @@ more detail.
 ### Week 7
 - [ ] Time log entries
 - [ ] Add search functionality
+- [ ] have delpoyed to AWS
 - [ ] Commit, pull, push
 ### Week 8
 - [ ] Time log entries

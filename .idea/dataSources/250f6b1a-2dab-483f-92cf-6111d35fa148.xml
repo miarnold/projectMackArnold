@@ -13,18 +13,70 @@
     <schema id="7" parent="1" name="phpmyadmin"/>
     <schema id="8" parent="1" name="SAMPLE"/>
     <schema id="9" parent="1" name="sys"/>
-    <table id="10" parent="2" name="users"/>
-    <column id="11" parent="10" name="user_name">
+    <table id="10" parent="2" name="cars"/>
+    <table id="11" parent="2" name="users"/>
+    <column id="12" parent="10" name="carID">
       <Position>1</Position>
-      <DataType>varchar(15)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="12" parent="10" name="user_pass">
+    <column id="13" parent="10" name="vehicle_type">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="13" parent="10" name="PRIMARY">
+    <column id="14" parent="10" name="vehicle_category">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="15" parent="10" name="vehicle_size">
+      <Position>4</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="16" parent="10" name="fuel_type">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="10" name="driving_wheels">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="18" parent="10" name="highway_miles">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="10" name="city_miles">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="10" name="year_of_make">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="21" parent="10" name="VIN">
+      <Position>10</Position>
+      <DataType>varchar(17)|0</DataType>
+    </column>
+    <key id="22" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>carID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="23" parent="11" name="user_name">
+      <Position>1</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="11" name="user_pass">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="25" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_name</ColNames>
       <Primary>1</Primary>

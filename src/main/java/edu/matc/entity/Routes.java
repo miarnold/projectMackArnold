@@ -1,17 +1,33 @@
 package edu.matc.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "routes")
 public class Routes {
 
+    @Id
+    @Column(name = "route_id")
     private int routeId;
+    @Column(name = "Driver_name")
     private String driverName;
+    @Column(name = "number_of_miles")
     private int numberOfMiles;
+    @Column(name = "number_of_high_way_miles")
     private int numberOfHighwayMiles;
+    @Column(name = "number_of_city_miles")
     private int numberOfCityMiles;
+    @Column(name = "which_car")
     private String whichCar;
+    @Column(name = "date")
     private LocalDate dateOfTrip;
+    @Column(name = "gas_price")
     private double gasPrice;
+    @Column(name = "notes")
     private String commuteNotes;
 
     public Routes() {
@@ -24,6 +40,13 @@ public class Routes {
 
         this.routeId = routeId;
         this.driverName = driverName;
+        this.numberOfMiles = numberOfMiles;
+        this.numberOfHighwayMiles = numberOfHighwayMiles;
+        this.numberOfCityMiles = numberOfCityMiles;
+        this.whichCar = whichCar;
+        this.dateOfTrip = dateOfTrip;
+        this.gasPrice = gasPrice;
+        this.commuteNotes = commuteNotes;
 
     }
 

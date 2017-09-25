@@ -55,7 +55,7 @@ public class UserHibernateDaoTest {
 
     @Test
     public void addUserTest() {
-        user = new User( "Samie", "Soper");
+        user = new User( "Dena", "Arnold");
 
         userDao.addUser(user);
         assertEquals("Incorrect size of results", listOfUsers + 1, userDao.getAllUsers().size());

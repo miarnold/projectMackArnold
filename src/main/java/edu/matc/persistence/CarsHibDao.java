@@ -52,7 +52,7 @@ public class CarsHibDao {
         Transaction transaction = null;
         try{
             transaction = session.beginTransaction();
-            car = new Cars(car.getCar_id(), car.getVehicleType(), car.getVehicleCategory(), car.getVehicleSize(),
+            car = new Cars(car.getVehicleType(), car.getVehicleCategory(), car.getVehicleSize(),
                     car.getFuelType(), car.getDrivingWheels(), car.getHighwayMiles(), car.getCityMiles(),
                      car.getYearOfMake(), car.getVin());
             session.save(car);

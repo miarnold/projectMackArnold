@@ -14,19 +14,19 @@ public class Cars {
     @Id
     @Column(name = "carID")
     private int car_id;
-    @Column(name = "vehicle_type")
+    @Column(name = "vehicle_type", nullable = false)
     private String vehicleType;
     @Column(name = "vehicle_category")
     private String vehicleCategory;
     @Column(name = "vehicle_size")
     private String vehicleSize;
-    @Column(name = "fuel_type")
+    @Column(name = "fuel_type", nullable = false)
     private String fuelType;
     @Column(name = "driving_wheels")
     private String drivingWheels;
-    @Column(name = "highway_miles")
+    @Column(name = "highway_miles", nullable = false)
     private int highwayMiles;
-    @Column(name = "city_miles")
+    @Column(name = "city_miles", nullable = false)
     private int cityMiles;
     @Column(name = "year_of_make")
     private int yearOfMake;
@@ -38,11 +38,10 @@ public class Cars {
 
     }
 
-    public Cars (int car_id, String vehicleType, String vehicleCategory, String vehicleSize,
+    public Cars ( String vehicleType, String vehicleCategory, String vehicleSize,
                  String fuelType, String drivingWheels, int highwayMiles, int cityMiles,
                  int yearOfMake, int vin) {
 
-        this.car_id = car_id;
         this.vehicleType = vehicleType;
         this.vehicleCategory = vehicleCategory;
         this.vehicleSize = vehicleSize;

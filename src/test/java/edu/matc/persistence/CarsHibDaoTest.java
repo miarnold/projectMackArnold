@@ -12,14 +12,14 @@ import static org.junit.Assert.*;
 public class CarsHibDaoTest {
     private final Logger logger = Logger.getLogger(this.getClass());
     CarsHibDao carDao;
-    Cars car;
+    Cars carObject;
     int listOfCars;
 
     @Before
     public void setUp() throws Exception {
         carDao = new CarsHibDao();
         listOfCars = carDao.getAllCars().size();
-        car = new Cars();
+        carObject = new Cars();
 
     }
 
@@ -33,9 +33,10 @@ public class CarsHibDaoTest {
 
     @Test
     public void addCarTest() {
-        car = new Cars( );
-
-        carDao.addCar(car);
+        carObject = new Cars("Compass","SUV", "Medium","Gas", "4-Wheel", 29, 24, 2013,15151515);
+        logger.info("---------");
+        logger.error(carObject);
+        carDao.addCar(carObject);
         assertEquals("Incorrect size of results", listOfCars + 1, carDao.getAllCars().size());
     }
 

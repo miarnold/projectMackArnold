@@ -32,12 +32,36 @@ public class CarsHibDaoTest {
     }
 
     @Test
+    public void selectUserTest() throws Exception {
+        carObject = carDao.selectCar(1);
+        assertNotNull(carObject);
+        assertEquals("wrong car selected", 1, carObject.getCar_id());
+    }
+
+    @Test
     public void addCarTest() {
-        carObject = new Cars("Compass","SUV", "Medium","Gas", "4-Wheel", 29, 24, 2013,15151515);
+        carObject = new Cars("Delete","Coupe", "Fully","Gags", "2-Wheel", 29, 24, 2009,17171717);
         logger.info("---------");
         logger.error(carObject);
         carDao.addCar(carObject);
         assertEquals("Incorrect size of results", listOfCars + 1, carDao.getAllCars().size());
     }
+
+    @Test
+    public void deleteUserTest() throws Exception {
+        carDao.deleteCar(3);
+        assertEquals("Incorrect size of results", listOfCars - 1, carDao.getAllCars().size());
+    }
+
+    @Test
+    public void updateUserTest() throws Exception {
+        listOfCars = carDao.getAllCars().size();
+        carObject = carDao.selectCar(2);
+        //logger.error(carObject);
+        carObject.setVehicleType("Rav4");
+        //logger.error(carObject);
+        carDao.updateCar(carObject);
+        assertEquals("List size has changed", listOfCars, carDao.getAllCars().size());
+         }
 
 }

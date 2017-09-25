@@ -65,4 +65,45 @@ public class CarsHibDao {
         }
         return car;
     }
+
+    public void updateCar(Cars car) {
+        Transaction transaction = null;
+        Session session = null;
+        try {
+            session = SessionFactoryProvider.getSessionFactory().openSession();
+            transaction = session.beginTransaction();
+            session.saveOrUpdate(car);
+            transaction.commit();
+        } catch (HibernateException he){
+            if (transaction != null) {
+                try {
+                    transaction.rollback();
+                } catch (HibernateException he2) {
+                    log.error("Error rolling back update of user: " + car, he2);
+                }
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
+
+    public Cars selectCar(int carId) {
+        Cars car = null;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try{
+            transaction = session.beginTransaction();
+            car = (Cars)session.get(Cars.class, carId);
+            session.get(Cars.class, carId);
+            transaction.commit();
+        }catch (HibernateException e) {
+            if (transaction!=null) transaction.rollback();
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return car;
+    }
 }

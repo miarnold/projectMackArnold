@@ -44,7 +44,7 @@ public class UserHibernateDaoTest {
     public void selectUserTest() throws Exception {
         user = userDao.selectUser("aaron");
         assertNotNull(user);
-        assertEquals("wrong password returned", "briggs", user.getUserPass());
+        assertEquals("wrong password returned", "tool", user.getUserPass());
     }
 
     @Test

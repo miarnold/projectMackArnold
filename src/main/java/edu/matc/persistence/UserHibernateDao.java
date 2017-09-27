@@ -58,7 +58,6 @@ public class UserHibernateDao {
         try{
             transaction = session.beginTransaction();
             user = (User)session.get(User.class, userName);
-            session.get(User.class, userName);
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();

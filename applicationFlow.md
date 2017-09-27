@@ -36,8 +36,8 @@ and to the right it will list out your cars
 ### google maps page
 
 1. this page will have a google maps so you can trace outand 
-measur how far you actually went and for how long
-1. 
+measur how far you actually went and for how long for city an highway 
+miles
 
 ### Your cars page
 

@@ -40,6 +40,6 @@ individual research topic: angular Programming
   * JUnit tests to achieve 100% code coverage for the tests, but for the line covereage i want at least 80% 
   
   ### [Project Plan](projectPlan.md)
-  
   ### [Time Log](timelog.md) 
   ### [Journal](journal.md)
+  ### [Application Flow](applicationFlow.md)

@@ -49,7 +49,7 @@ public class CarsHibDaoTest {
 
     @Test
     public void deleteUserTest() throws Exception {
-        carDao.deleteCar(3);
+        carDao.deleteCar(4);
         assertEquals("Incorrect size of results", listOfCars - 1, carDao.getAllCars().size());
     }
 

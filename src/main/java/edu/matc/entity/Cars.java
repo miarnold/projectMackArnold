@@ -32,6 +32,8 @@ public class Cars {
     private int yearOfMake;
     @Column(name = "VIN")
     private int vin;
+    @Column(name = "user_name")
+    private String userName;
 
 
     public Cars() {
@@ -135,5 +137,9 @@ public class Cars {
     public void setVin(int vin) {
         this.vin = vin;
     }
+
+    public String getUserName() { return userName; }
+
+    public void setUserName(String userName) { this.userName = userName; }
 
 }

@@ -22,6 +22,9 @@
 
         <!-- List the annotated entity class/es -->
         <mapping class="edu.matc.entity.User"/>
+        <mapping class="edu.matc.entity.Cars"/>
+        <mapping class="edu.matc.entity.UserRole"/>
+        <mapping class="edu.matc.entity.Routes"/>
 
     </session-factory>
 

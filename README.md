@@ -19,7 +19,7 @@ mapping out where you went and how far you went. Another one I was thinking abou
 edmunds is an API that you use to get all vehicle information, from pictures to gas mileage. And if I have time
 I will look into a gas prices API that tells you the current gas prices and your can use that in the report.
 
-individual research topic: angular Programming
+individual research topic: AWS relation Database
 
 ### Project Technologies/Techniques 
 

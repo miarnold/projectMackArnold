@@ -49,13 +49,13 @@ public class UserHibernateDaoTest {
 
     @Test
     public void deleteUserTest() throws Exception {
-        userDao.deleteUser("Fred");
+        userDao.deleteUser("Dena");
         assertEquals("Incorrect size of results", listOfUsers - 1, userDao.getAllUsers().size());
     }
 
     @Test
     public void addUserTest() {
-        user = new User( "Fred", "Arnold");
+        user = new User( "Dena", "Arnold");
 
         userDao.addUser(user);
         assertEquals("Incorrect size of results", listOfUsers + 1, userDao.getAllUsers().size());

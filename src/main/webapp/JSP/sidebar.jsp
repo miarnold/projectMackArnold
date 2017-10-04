@@ -8,7 +8,7 @@
         <li><a href="/MyProfile">My Profile</a></li>
         <li><a href="/FAQ">FAQ</a></li>
         <li><a href="/Sign-Up">Sign-up</a></li>
-        <li><a href="/Logon">Login</a></li>
+        <li><a href="/logon">Login</a></li>
         <li><a href="/Logout">logout</a></li>
         <li><a href="SearchResults">Admin Only</a></li>
     </ul>

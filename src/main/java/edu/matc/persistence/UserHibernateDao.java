@@ -44,7 +44,7 @@ public class UserHibernateDao {
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();
-            e.printStackTrace();
+            log.error("error deleting user", e);
         }finally {
             session.close();
         }
@@ -61,7 +61,7 @@ public class UserHibernateDao {
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();
-            e.printStackTrace();
+            log.error("error selecting user",e);
         }finally {
             session.close();
         }
@@ -104,7 +104,7 @@ public class UserHibernateDao {
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();
-            e.printStackTrace();
+            log.error("error adding user", e);
         }finally {
             session.close();
         }

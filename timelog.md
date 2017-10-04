@@ -13,3 +13,8 @@
 | 9/20/17 | working on this weeks exercise and getting some work done on project  | 5  |   |
 | 9/22/17 | finishing up this weeks exercise  | 2  |   |
 | 9/25/17 | creating javabeans and daos for tables in project  | 3  |   |
+| 9/27/17 | working on the database and getting ready for checkpoint  | 3  |   |
+| 9/27/17 | getting my application deployed and that took a while  | 2  |   |
+| 10/2/17 | finished database and working on authentication  | 7  |   |
+
+

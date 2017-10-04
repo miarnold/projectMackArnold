@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_name` varchar(15) NOT NULL,
   `user_pass` varchar(15) NOT NULL,
+
   PRIMARY KEY (`user_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -48,34 +49,35 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-20 20:51:43
+-- Dump completed on 2017-10-04 10:57:00
 
 
-CREATE TABLE cars
+-- auto-generated definition
+CREATE TABLE users
 (
-  carID           INT AUTO_INCREMENT
+  user_name VARCHAR(15) NOT NULL
     PRIMARY KEY,
-  vehicle_type     VARCHAR(15) NOT NULL,
-  vehicle_category VARCHAR(30) NULL,
-  vehicle_size     VARCHAR(15) NULL,
-  fuel_type        VARCHAR(30) NOT NULL,
-  driving_wheels   VARCHAR(30) NULL,
-  highway_miles    INT         NOT NULL,
-  city_miles       INT         NOT NULL,
-  year_of_make      INT         NULL,
-  user_name varchar(15),
-  FOREIGN KEY (user_name) REFERENCES users(user_name)
+  user_pass VARCHAR(15) NOT NULL,
+  route_id int,
+  FOREIGN KEY (route_id) REFERENCES routes(route_id)
 );
 
-CREATE TABLE routes
+ALTER TABLE users
+  ADD FOREIGN KEY (route_id) REFERENCES routes(route_id);
+
+create table routes
 (
-  route_id int AUTO_INCREMENT PRIMARY KEY,
-  Driver_name varchar(30) NOT NULL,
-  number_of_miles int NOT NULL,
-  number_of_high_way_miles int,
-  number_of_city_miles int,
-  which_car varchar(20) NOT NULL,
-  date date NOT NULL,
-  gas_price varchar(10) NOT NULL,
-  notes varchar(100)
-);
+  route_id int auto_increment
+    primary key,
+  Driver_name varchar(30) not null,
+  number_of_miles int not null,
+  number_of_high_way_miles int null,
+  number_of_city_miles int null,
+  which_car varchar(20) not null,
+  date date not null,
+  gas_price varchar(10) not null,
+  notes varchar(100) null
+)
+;
+
+

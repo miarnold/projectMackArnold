@@ -155,15 +155,27 @@ role_name</ColNames>
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="43" parent="13" name="route_id">
+    <column id="43" parent="13" name="first_name">
+      <Position>4</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="last_name">
+      <Position>5</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="email">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <index id="46" parent="13" name="route_id">
       <ColNames>route_id</ColNames>
     </index>
-    <key id="44" parent="13" name="PRIMARY">
+    <key id="47" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_name</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="45" parent="13" name="users_ibfk_1">
+    <foreign-key id="48" parent="13" name="users_ibfk_1">
       <ColNames>route_id</ColNames>
       <RefSchemaName>mackproject</RefSchemaName>
       <RefTableName>routes</RefTableName>

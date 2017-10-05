@@ -971,3 +971,37 @@ HHH000115: Hibernate connection pool size: 20 (min=1)
 HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 HHH000399: Using default transaction strategy (direct JDBC transactions)
 HHH000397: Using ASTQueryTranslatorFactory
+HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+HHH000412: Hibernate Core {4.3.11.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000043: Configuring from resource: /hibernate.cfg.xml
+HHH000040: Configuration resource: /hibernate.cfg.xml
+HHH000041: Configured SessionFactory: null
+HHH000402: Using Hibernate built-in connection pool (not for production use!)
+HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/users_test]
+HHH000046: Connection properties: {user=root, password=****}
+HHH000006: Autocommit mode: false
+HHH000115: Hibernate connection pool size: 20 (min=1)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000399: Using default transaction strategy (direct JDBC transactions)
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000227: Running hbm2ddl schema export
+HHH000388: Unsuccessful: CREATE TABLE cars(carID INT AUTO_INCREMENT PRIMARY KEY,vehicle_type     VARCHAR(15) NOT NULL,vehicle_category VARCHAR(30) NULL,vehicle_size VARCHAR(15) NULL,fuel_type VARCHAR(30) NOT NULL,driving_wheels VARCHAR(30) NULL,highway_miles INT NOT NULL,city_miles INT NOT NULL,year_of_make INT NULL,VIN VARCHAR(17) NULL)
+Table 'cars' already exists
+HHH000230: Schema export complete
+HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+HHH000412: Hibernate Core {4.3.11.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000043: Configuring from resource: /hibernate.cfg.xml
+HHH000040: Configuration resource: /hibernate.cfg.xml
+HHH000041: Configured SessionFactory: null
+HHH000402: Using Hibernate built-in connection pool (not for production use!)
+HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mackproject]
+HHH000046: Connection properties: {user=root, password=****}
+HHH000006: Autocommit mode: false
+HHH000115: Hibernate connection pool size: 20 (min=1)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000399: Using default transaction strategy (direct JDBC transactions)
+HHH000397: Using ASTQueryTranslatorFactory

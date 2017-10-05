@@ -5,3 +5,8 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'student';
 127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1
 
 ssh -i "/home/student/IntellijProjects/Keys/FallEnterpriseProject.pem" ubuntu@ec2-18-220-242-28.us-east-2.compute.amazonaws.com
+
+
+scp -i /home/student/IntellijProjects/Keys/FallEnterpriseProject.pem mysql-connector-java-5.1.39.jar ubuntu@ec2-18-220-242-28.us-east-2.compute.amazonaws.com:~
+
+chmod 664 mysql-connector-java-5.1.39.jar

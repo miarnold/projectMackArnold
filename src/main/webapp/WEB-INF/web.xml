@@ -6,14 +6,14 @@
         id="Your_WebApp_ID"
         version="2.5">
     <display-name>Archetype Created Web Application</display-name>
-</web-app>
+
 
 
         <!-- Tell the server to use form-based authentication. -->
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
-           <form-login-page>/logon</form-login-page>
+           <form-login-page>/JSP/logon.jsp</form-login-page>
            <form-error-page>/Login_failed</form-error-page>
         </form-login-config>
     </login-config>
@@ -22,7 +22,7 @@
     <security-constraint>
     <web-resource-collection>
         <web-resource-name>projectMackArnold</web-resource-name>
-       <url-pattern>/controller/*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </web-resource-collection>
     <auth-constraint>
         <role-name>registered-user</role-name>
@@ -37,3 +37,5 @@
     <security-role>
     <role-name>administrator</role-name>
     </security-role>
+
+</web-app>

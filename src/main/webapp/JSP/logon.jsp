@@ -6,6 +6,6 @@
 <%@include file="sidebar.jsp"%>
 
 <%@include file="logon-main.jsp"%>
-<%@include file="right-sidebar.jsp"%>
+
 <%@include file="footer.jsp"%>
 

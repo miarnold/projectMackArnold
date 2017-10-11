@@ -1,6 +1,7 @@
 <%@include file="taglib.jsp"%>
 
-
+<body>
+<div class="col-sm-8 text-middle">
 <%--TODO Pretty up the results!--%>
 <div class="container-fluid">
     <h2>Search Results: </h2>
@@ -20,5 +21,5 @@
     </table>
 </div>
 
+</div>
 </body>
-</html>

@@ -1,11 +1,22 @@
-
-
 <body>
+<div class="col-sm-8 text-middle">
 <h2>Search the users, Admins Only</h2>
-<form action="/UserResults" class="form-inline">
+    <div class="container-fluid">
+        <h2>Search Results: </h2>
+        <!--${users}-->
+        <table id="userTable" class="display" style="width:100%">
+            <th>User Name</th>
+            <th>User Password</th>
 
-    <button type="submit" name="submit" value="viewAll" class="btn btn-primary">View All Users</button>
-    <button type="submit" name="submit" value="Update" class="btn btn-primary">Update User</button>
-</form>
+
+
+            <c:forEach items="${users}" var="user">
+                <tr>
+                    <td>${user.userName} </td>
+                    <td>${user.userPass} </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+</div>
 </body>
-</html>

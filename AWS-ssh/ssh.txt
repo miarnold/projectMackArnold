@@ -10,3 +10,9 @@ ssh -i "/home/student/IntellijProjects/Keys/FallEnterpriseProject.pem" ubuntu@ec
 scp -i /home/student/IntellijProjects/Keys/FallEnterpriseProject.pem mysql-connector-java-5.1.39.jar ubuntu@ec2-18-220-242-28.us-east-2.compute.amazonaws.com:~
 
 chmod 664 mysql-connector-java-5.1.39.jar
+
+
+this is my constraints to keep
+
+CONSTRAINT `users_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `user_roles` (`role_id`)
+CONSTRAINT `users_ibfk_1` FOREIGN KEY (`route_id`) REFERENCES `routes` (`route_id`)

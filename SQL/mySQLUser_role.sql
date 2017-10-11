@@ -16,35 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cars`
+-- Table structure for table `user_roles`
 --
 
-DROP TABLE IF EXISTS `cars`;
+DROP TABLE IF EXISTS `user_roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cars` (
-  `carID` int(11) NOT NULL AUTO_INCREMENT,
-  `vehicle_type` varchar(15) NOT NULL,
-  `vehicle_category` varchar(30) DEFAULT NULL,
-  `vehicle_size` varchar(15) DEFAULT NULL,
-  `fuel_type` varchar(30) NOT NULL,
-  `driving_wheels` varchar(30) DEFAULT NULL,
-  `highway_miles` int(11) NOT NULL,
-  `city_miles` int(11) NOT NULL,
-  `year_of_make` int(11) DEFAULT NULL,
-  `VIN` varchar(17) DEFAULT NULL,
-  `user_id` int DEFAULT NULL,
-  PRIMARY KEY (`carID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `user_roles` (
+  `role_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(15) NOT NULL,
+  `role_name` varchar(15) NOT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cars`
+-- Dumping data for table `user_roles`
 --
 
-LOCK TABLES `cars` WRITE;
-/*!40000 ALTER TABLE `cars` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cars` ENABLE KEYS */;
+LOCK TABLES `user_roles` WRITE;
+/*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
+INSERT INTO `user_roles` VALUES (1,'admin','administrator');
+/*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-25 12:04:25
+-- Dump completed on 2017-10-11 12:45:44

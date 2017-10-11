@@ -16,35 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cars`
+-- Table structure for table `routes`
 --
 
-DROP TABLE IF EXISTS `cars`;
+DROP TABLE IF EXISTS `routes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cars` (
-  `carID` int(11) NOT NULL AUTO_INCREMENT,
-  `vehicle_type` varchar(15) NOT NULL,
-  `vehicle_category` varchar(30) DEFAULT NULL,
-  `vehicle_size` varchar(15) DEFAULT NULL,
-  `fuel_type` varchar(30) NOT NULL,
-  `driving_wheels` varchar(30) DEFAULT NULL,
-  `highway_miles` int(11) NOT NULL,
-  `city_miles` int(11) NOT NULL,
-  `year_of_make` int(11) DEFAULT NULL,
-  `VIN` varchar(17) DEFAULT NULL,
-  `user_id` int DEFAULT NULL,
-  PRIMARY KEY (`carID`)
+CREATE TABLE `routes` (
+  `route_id` int(11) NOT NULL AUTO_INCREMENT,
+  `Driver_name` varchar(30) NOT NULL,
+  `number_of_miles` int(11) NOT NULL,
+  `number_of_high_way_miles` int(11) DEFAULT NULL,
+  `number_of_city_miles` int(11) DEFAULT NULL,
+  `which_car` varchar(20) NOT NULL,
+  `date` date NOT NULL,
+  `gas_price` varchar(10) NOT NULL,
+  `notes` varchar(100) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`route_id`),
+  KEY `route_user_FK` (`user_id`),
+  CONSTRAINT `route_user_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cars`
+-- Dumping data for table `routes`
 --
 
-LOCK TABLES `cars` WRITE;
-/*!40000 ALTER TABLE `cars` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cars` ENABLE KEYS */;
+LOCK TABLES `routes` WRITE;
+/*!40000 ALTER TABLE `routes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `routes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-25 12:04:25
+-- Dump completed on 2017-10-11 13:35:56

@@ -3,8 +3,7 @@ CREATE DATABASE mackproject;
 
 CREATE TABLE routes
 (
-  route_id                 INT AUTO_INCREMENT
-    PRIMARY KEY,
+  route_id                 INT AUTO_INCREMENT,
   Driver_name              VARCHAR(30)  NOT NULL,
   number_of_miles          INT          NOT NULL,
   number_of_high_way_miles INT          NULL,
@@ -12,7 +11,9 @@ CREATE TABLE routes
   which_car                VARCHAR(20)  NOT NULL,
   date                     DATE         NOT NULL,
   gas_price                VARCHAR(10)  NOT NULL,
-  notes                    VARCHAR(100) NULL
+  notes                    VARCHAR(100) NULL,
+  user_id                  INT,
+  PRIMARY KEY (route_id)
 );
 
 CREATE TABLE user_roles
@@ -43,11 +44,17 @@ CREATE INDEX user_name
 
 CREATE TABLE users
 (
-  user_name VARCHAR(15) NOT NULL
-    PRIMARY KEY,
+  user_id int NOT NULL AUTO_INCREMENT,
+  user_name VARCHAR(15) NOT NULL,
   user_pass VARCHAR(15) NOT NULL,
-  route_id  INT         NULL,
-  FOREIGN KEY (route_id) REFERENCES routes (route_id)
+  first_name VARCHAR(25),
+  last_name VARCHAR(25),
+  email VARCHAR(30),
+  PRIMARY KEY (user_id),
+  UNIQUE (user_name)
 );
-CREATE INDEX route_id
-  ON users (route_id);
+alter table routes add constraint route_user_FK foreign key (user_id) references users(user_id);
+
+ALTER TABLE routes
+  ADD CONSTRAINT route_user_FK
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);

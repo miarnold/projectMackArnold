@@ -23,11 +23,16 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `user_name` varchar(15) NOT NULL,
-  `user_pass` varchar(15) NOT NULL,
-
-  PRIMARY KEY (`user_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_id`    INT         AUTO_INCREMENT,
+  `user_name`  VARCHAR(15) NOT NULL,
+  `user_pass`  VARCHAR(15) NOT NULL,
+  `route_id`   INT(11)     DEFAULT NULL,
+  `first_name` VARCHAR(25) DEFAULT NULL,
+  `last_name`  VARCHAR(25) DEFAULT NULL,
+  `email`      VARCHAR(25) DEFAULT NULL,
+  `role_id`    INT(11)     DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+);
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +41,6 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('aaron','briggs'),('mack','arnold');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,35 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-04 10:57:00
-
-
--- auto-generated definition
-CREATE TABLE users
-(
-  user_name VARCHAR(15) NOT NULL
-    PRIMARY KEY,
-  user_pass VARCHAR(15) NOT NULL,
-  route_id int,
-  FOREIGN KEY (route_id) REFERENCES routes(route_id)
-);
-
-ALTER TABLE users
-  ADD FOREIGN KEY (route_id) REFERENCES routes(route_id);
-
-create table routes
-(
-  route_id int auto_increment
-    primary key,
-  Driver_name varchar(30) not null,
-  number_of_miles int not null,
-  number_of_high_way_miles int null,
-  number_of_city_miles int null,
-  which_car varchar(20) not null,
-  date date not null,
-  gas_price varchar(10) not null,
-  notes varchar(100) null
-)
-;
-
-
+-- Dump completed on 2017-10-11 12:54:16

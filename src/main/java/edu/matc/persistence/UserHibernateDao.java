@@ -99,7 +99,7 @@ public class UserHibernateDao {
         Transaction transaction = null;
         try{
             transaction = session.beginTransaction();
-            user = new User( user.getUserName(), user.getUserPass());
+            user = new User( user.getUserId(), user.getUserName(), user.getUserPass(), user.getFirstName(), user.getLastName(), user.getEmail());
             session.save(user);
             transaction.commit();
         }catch (HibernateException e) {

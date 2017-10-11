@@ -2,17 +2,17 @@ package edu.matc.entity;
 
 
 import com.sun.javafx.beans.IDProperty;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "cars")
 public class Cars {
     @Id
     @Column(name = "carID")
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     private int car_id;
     @Column(name = "vehicle_type", nullable = false)
     private String vehicleType;
@@ -32,18 +32,16 @@ public class Cars {
     private int yearOfMake;
     @Column(name = "VIN")
     private int vin;
-    @Column(name = "user_name")
-    private String userName;
 
 
     public Cars() {
 
     }
 
-    public Cars ( String vehicleType, String vehicleCategory, String vehicleSize,
+    public Cars ( int car_id, String vehicleType, String vehicleCategory, String vehicleSize,
                  String fuelType, String drivingWheels, int highwayMiles, int cityMiles,
                  int yearOfMake, int vin) {
-
+        this.car_id = car_id;
         this.vehicleType = vehicleType;
         this.vehicleCategory = vehicleCategory;
         this.vehicleSize = vehicleSize;
@@ -138,8 +136,5 @@ public class Cars {
         this.vin = vin;
     }
 
-    public String getUserName() { return userName; }
-
-    public void setUserName(String userName) { this.userName = userName; }
 
 }

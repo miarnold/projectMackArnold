@@ -1,14 +1,21 @@
 package edu.matc.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 public class UserRole {
 
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    @Column (name="role_id")
+    private int roleId;
     @Column(name = "user_name")
     private String userName;
-    @Id
+
     @Column(name = "role_name")
     private String roleName;
 
@@ -16,7 +23,8 @@ public class UserRole {
 
     }
 
-    public UserRole(String userName, String roleName) {
+    public UserRole(int roleId, String userName, String roleName) {
+        this.roleId = roleId;
         this.userName = userName;
         this.roleName = roleName;
     }
@@ -37,6 +45,16 @@ public class UserRole {
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
+
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
+
 
     @Override
     public String toString() {

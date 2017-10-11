@@ -1,9 +1,8 @@
 package edu.matc.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -11,6 +10,8 @@ import java.time.LocalDate;
 public class Routes {
 
     @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
     @Column(name = "route_id")
     private int routeId;
     @Column(name = "Driver_name")
@@ -29,6 +30,8 @@ public class Routes {
     private double gasPrice;
     @Column(name = "notes")
     private String commuteNotes;
+    @Column (name="user_id")
+    private int userid;
 
     public Routes() {
 
@@ -36,7 +39,7 @@ public class Routes {
 
     public Routes(int routeId, String driverName,int numberOfMiles, int numberOfHighwayMiles,
                   int numberOfCityMiles, String whichCar, LocalDate dateOfTrip, double gasPrice,
-                  String commuteNotes) {
+                  String commuteNotes, int userid) {
 
         this.routeId = routeId;
         this.driverName = driverName;
@@ -47,6 +50,7 @@ public class Routes {
         this.dateOfTrip = dateOfTrip;
         this.gasPrice = gasPrice;
         this.commuteNotes = commuteNotes;
+        this.userid = userid;
 
     }
 
@@ -58,11 +62,11 @@ public class Routes {
         this.routeId = routeId;
     }
 
-    public String getDriveName() {
+    public String getDriverName() {
         return driverName;
     }
 
-    public void setDriveName(String driveName) {
+    public void setDriverName(String driveName) {
         this.driverName = driveName;
     }
 
@@ -120,6 +124,14 @@ public class Routes {
 
     public void setCommuteNotes(String commuteNotes) {
         this.commuteNotes = commuteNotes;
+    }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
 

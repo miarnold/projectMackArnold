@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet (
-        urlPatterns = {"/MyProfile"}
+        urlPatterns = {"/Admin/MyProfile"}
 )
 
 public class MyProfile extends HttpServlet {

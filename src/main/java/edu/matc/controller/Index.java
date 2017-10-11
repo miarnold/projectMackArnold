@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet (
-        urlPatterns = {"/Index"}
+        urlPatterns = {"/Admin/Index"}
 )
 
 public class Index extends HttpServlet {

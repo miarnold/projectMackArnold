@@ -22,53 +22,14 @@
     <security-constraint>
     <web-resource-collection>
         <web-resource-name>projectMackArnold</web-resource-name>
-        <url-pattern>/Index</url-pattern>
+        <url-pattern>/Admin/*</url-pattern>
     </web-resource-collection>
     <auth-constraint>
         <role-name>registered-user</role-name>
         <role-name>administrator</role-name>
     </auth-constraint>
     </security-constraint>
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>projectMackArnold</web-resource-name>
-            <url-pattern>/MyProfile</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>registered-user</role-name>
-            <role-name>administrator</role-name>
-        </auth-constraint>
-    </security-constraint>
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>projectMackArnold</web-resource-name>
-            <url-pattern>/Cars</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>registered-user</role-name>
-            <role-name>administrator</role-name>
-        </auth-constraint>
-    </security-constraint>
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>projectMackArnold</web-resource-name>
-            <url-pattern>/MyReports</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>registered-user</role-name>
-            <role-name>administrator</role-name>
-        </auth-constraint>
-    </security-constraint>
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>projectMackArnold</web-resource-name>
-            <url-pattern>/Logout</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <role-name>registered-user</role-name>
-            <role-name>administrator</role-name>
-        </auth-constraint>
-    </security-constraint>
+
     <security-role>
     <role-name>registered-user</role-name>
     </security-role>

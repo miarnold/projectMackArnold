@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet (
-        urlPatterns = {"/Logout"}
+        urlPatterns = {"/Admin/Logout"}
 )
 
 public class Logout extends HttpServlet {

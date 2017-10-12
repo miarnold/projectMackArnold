@@ -9,5 +9,5 @@
             <p><a href="/Sign-Up">Sign-up</a></p>
             <p><a href="/logon">Login</a></p>
             <p><a href="/Admin/Logout">logout</a></p>
-            <p><a href="/Admin/SearchResults">Admin Only</a></p>
+            <p><a href="/AdminOnly/SearchResults">Admin Only</a></p>
         </div>

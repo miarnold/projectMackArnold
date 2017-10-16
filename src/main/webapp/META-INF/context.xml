@@ -1,4 +1,4 @@
-<Context docBase="projectMackArnold" path="projectMackArnold/" reloadable="true">
+<Context docBase="projectMackArnold" path="/projectMackArnold" reloadable="true">
     <Realm className="org.apache.catalina.realm.JDBCRealm"
            driverName="com.mysql.jdbc.Driver"
            connectionURL="jdbc:mysql://localhost:3306/mackproject?user=root&amp;password=student"

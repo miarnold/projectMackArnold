@@ -16,7 +16,7 @@ public class MyProfile extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/JSP/profile.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("JSP/profile.jsp");
         dispatcher.forward(req, resp);
 
     }

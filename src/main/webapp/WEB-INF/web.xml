@@ -22,7 +22,7 @@
     <security-constraint>
     <web-resource-collection>
         <web-resource-name>projectMackArnold</web-resource-name>
-        <url-pattern>/Admin/*</url-pattern>
+        <url-pattern>/Cars</url-pattern>
     </web-resource-collection>
     <auth-constraint>
         <role-name>registered-user</role-name>
@@ -33,12 +33,57 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>projectMackArnold</web-resource-name>
-            <url-pattern>/AdminOnly/*</url-pattern>
+            <url-pattern>/Index</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>registered-user</role-name>
+            <role-name>administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>projectMackArnold</web-resource-name>
+            <url-pattern>/Logout</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>registered-user</role-name>
+            <role-name>administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>projectMackArnold</web-resource-name>
+            <url-pattern>/MyProfile</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>registered-user</role-name>
+            <role-name>administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>projectMackArnold</web-resource-name>
+            <url-pattern>/MyReports</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>registered-user</role-name>
+            <role-name>administrator</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>projectMackArnold</web-resource-name>
+            <url-pattern>/SearchResults</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>administrator</role-name>
         </auth-constraint>
     </security-constraint>
+
 
     <security-role>
     <role-name>registered-user</role-name>

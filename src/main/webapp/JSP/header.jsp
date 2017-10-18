@@ -61,10 +61,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/Index">Home</a></li>
+                <li class="active"><a href="Index">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/logon"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="logon"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>

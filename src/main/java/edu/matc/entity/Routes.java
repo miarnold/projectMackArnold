@@ -31,7 +31,7 @@ public class Routes {
     @Column(name = "notes")
     private String commuteNotes;
     @Column (name="user_id")
-    private int userid;
+    private int userId;
 
     public Routes() {
 
@@ -39,7 +39,7 @@ public class Routes {
 
     public Routes(int routeId, String driverName,int numberOfMiles, int numberOfHighwayMiles,
                   int numberOfCityMiles, String whichCar, LocalDate dateOfTrip, double gasPrice,
-                  String commuteNotes, int userid) {
+                  String commuteNotes, int userId) {
 
         this.routeId = routeId;
         this.driverName = driverName;
@@ -50,7 +50,7 @@ public class Routes {
         this.dateOfTrip = dateOfTrip;
         this.gasPrice = gasPrice;
         this.commuteNotes = commuteNotes;
-        this.userid = userid;
+        this.userId = userId;
 
     }
 
@@ -126,12 +126,14 @@ public class Routes {
         this.commuteNotes = commuteNotes;
     }
 
+    @ManyToOne()
+    @JoinColumn(name="user_id", nullable = false)
     public int getUserid() {
-        return userid;
+        return userId;
     }
 
     public void setUserid(int userid) {
-        this.userid = userid;
+        this.userId = userid;
     }
 
 

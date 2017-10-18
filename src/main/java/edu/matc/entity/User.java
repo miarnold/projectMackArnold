@@ -71,6 +71,7 @@ public class User {
         this.userPass = userPass;
     }
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "User")
     public int getUserId() {
         return userId;
     }

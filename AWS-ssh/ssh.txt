@@ -16,3 +16,5 @@ this is my constraints to keep
 
 CONSTRAINT `users_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `user_roles` (`role_id`)
 CONSTRAINT `users_ibfk_1` FOREIGN KEY (`route_id`) REFERENCES `routes` (`route_id`)
+
+alter table cars add foreign key (user_id) references users(user_id);

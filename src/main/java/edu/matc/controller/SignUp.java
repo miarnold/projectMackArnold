@@ -32,6 +32,7 @@ public class SignUp extends HttpServlet {
         addMe.setLastName(req.getParameter("lastName"));
         addMe.setUserName(req.getParameter("userName"));
         addMe.setUserPass(req.getParameter("password"));
+        addMe.setEmail(req.getParameter("email"));
 
 
         userDao.addUser(addMe);

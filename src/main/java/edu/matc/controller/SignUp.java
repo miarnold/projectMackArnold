@@ -35,7 +35,7 @@ public class SignUp extends HttpServlet {
 
 
         userDao.addUser(addMe);
-        UserRole role = new UserRole(addMe, addMe.getFirstName(),"registered-user");
+        UserRole role = new UserRole(addMe.getUserId(), addMe.getFirstName(),"registered-user");
         log.error(role);
         roleDao.addRole(role);
 

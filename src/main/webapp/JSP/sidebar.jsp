@@ -8,6 +8,6 @@
             <p><a href="FAQ">FAQ</a></p>
             <p><a href="Sign-Up">Sign-up</a></p>
             <p><a href="logon">Login</a></p>
-            <p><a href="Logout">logout</a></p>
+            <p><a href="logout">logout</a></p>
             <p><a href="SearchResults">Admin Only</a></p>
         </div>

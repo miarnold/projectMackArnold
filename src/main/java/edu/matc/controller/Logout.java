@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet (
-        urlPatterns = {"/Logout"}
+        urlPatterns = {"/logout"}
 )
 
 public class Logout extends HttpServlet {
@@ -18,7 +18,7 @@ public class Logout extends HttpServlet {
 
         req.getSession().invalidate();
 
-        resp.sendRedirect("/Logon");
+        resp.sendRedirect("logon");
 
 
     }

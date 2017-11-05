@@ -34,12 +34,12 @@ public class UserHibernateDao {
     }
 
 
-    public void deleteUser(String userName){
+    public void deleteUser(int id){
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
         try{
             transaction = session.beginTransaction();
-            User user = (User)session.get(User.class, userName);
+            User user = (User)session.get(User.class, id);
             session.delete(user);
             transaction.commit();
         }catch (HibernateException e) {
@@ -51,13 +51,13 @@ public class UserHibernateDao {
     }
 
 
-    public User selectUser(String userName) {
+    public User selectUser(int Id) {
         User user = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
         try{
             transaction = session.beginTransaction();
-            user = (User)session.get(User.class, userName);
+            user = (User)session.get(User.class, Id);
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();

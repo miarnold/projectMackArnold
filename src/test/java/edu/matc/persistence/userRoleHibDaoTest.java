@@ -43,24 +43,28 @@ public class userRoleHibDaoTest {
         //assertEquals("Update changes failed to save", role.getRoleName(), roleDao.);
     }
 
-/*
+
     @Test
-    public void selectUserTest() throws Exception {
+    public void selectRoleTest() throws Exception {
         role = roleDao.selectRole(1);
         assertNotNull(role);
         assertEquals("wrong role returned", 1, role.getRoleId());
     }
 
-    /*
+
     @Test
     public void deleteUserTest() throws Exception {
-        userDao.deleteUser("Dena");
-        assertEquals("Incorrect size of results", listOfUsers - 1, userDao.getAllUsers().size());
-    }*/
+        roleDao.deleteRoles(3);
+        assertEquals("Incorrect size of results", listOfRoles - 1, roleDao.getAllRoles().size());
+    }
 
     @Test
     public void addRoleTest() {
-        role = new UserRole(12,"Dena", "Administrator",12);
+        role = new UserRole();
+        role.setRoleId(4);
+        role.setUserName("Dena");
+        role.setRoleName("Administator");
+        role.setUserId(4);
 
         roleDao.addRole(role);
         assertEquals("Incorrect size of results", listOfRoles + 1, roleDao.getAllRoles().size());

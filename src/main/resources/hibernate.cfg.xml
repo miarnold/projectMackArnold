@@ -20,6 +20,7 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
 
+
         <!-- List the annotated entity class/es -->
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.Cars"/>

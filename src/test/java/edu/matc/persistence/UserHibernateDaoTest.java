@@ -28,34 +28,37 @@ public class UserHibernateDaoTest {
         assertEquals("Unexpected number of users returned", listOfUsers, users.size());
     }
 
+
+    @Test
+    public void selectUserTest() throws Exception {
+        user = userDao.selectUser(1);
+        assertNotNull(user);
+        assertEquals("wrong password returned", "admin", user.getUserPass());
+    }
+
     @Test
     public void updateUserTest() throws Exception {
         listOfUsers = userDao.getAllUsers().size();
-        user = userDao.selectUser("aaron");
+        user = userDao.selectUser(7);
         logger.error(user);
         user.setUserPass("tool");
         logger.error(user);
         userDao.updateUser(user);
         assertEquals("List size has changed", listOfUsers, userDao.getAllUsers().size());
-        assertEquals("Update changes failed to save", user.toString(), userDao.selectUser("aaron").toString());
+        assertEquals("Update changes failed to save", user.toString(), userDao.selectUser(7).toString());
     }
 
-    @Test
-    public void selectUserTest() throws Exception {
-        user = userDao.selectUser("aaron");
-        assertNotNull(user);
-        assertEquals("wrong password returned", "tool", user.getUserPass());
-    }
+
 
     @Test
     public void deleteUserTest() throws Exception {
-        userDao.deleteUser("Dena");
+        userDao.deleteUser(8);
         assertEquals("Incorrect size of results", listOfUsers - 1, userDao.getAllUsers().size());
     }
 
     @Test
     public void addUserTest() {
-        user = new User(1,"Dena", "cool","Dena","Arnold","booger@me.com");
+        user = new User(8,"Dena", "cool","Dena","Arnold","booger@me.com");
 
         userDao.addUser(user);
         assertEquals("Incorrect size of results", listOfUsers + 1, userDao.getAllUsers().size());

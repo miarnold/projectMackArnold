@@ -1,1 +1,0 @@
-CREATE TABLE cars(carID INT AUTO_INCREMENT PRIMARY KEY,vehicle_type     VARCHAR(15) NOT NULL,vehicle_category VARCHAR(30) NULL,vehicle_size VARCHAR(15) NULL,fuel_type VARCHAR(30) NOT NULL,driving_wheels VARCHAR(30) NULL,highway_miles INT NOT NULL,city_miles INT NOT NULL,year_of_make INT NULL,VIN VARCHAR(17) NULL);

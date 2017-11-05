@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/SQL/database.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/databaseScript.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/mySQL.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/mySQLCars.sql" dialect="MySQL" />
@@ -8,5 +9,8 @@
     <file url="file://$PROJECT_DIR$/SQL/mySQLUser_role.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/mySQLUsers.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/SQL/mySQLproject.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL/roles.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL/routes.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL/users.sql" dialect="MySQL" />
   </component>
 </project>

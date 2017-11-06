@@ -89,11 +89,7 @@ CREATE TABLE `user_roles` (
   `role_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(15) NOT NULL,
   `role_name` varchar(15) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`role_id`)
-  /*KEY `user_id` (`user_id`),
-  CONSTRAINT `user_roles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-  CONSTRAINT `user_roles_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)*/
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -102,19 +98,16 @@ CREATE TABLE `user_roles` (
 --
 
 LOCK TABLES `user_roles` WRITE;
-SET FOREIGN_KEY_CHECKS=0;
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
-INSERT INTO `user_roles` VALUES (1,'admin','administrator',1),(2,'mack','administrator',2),(3,'sam','registered-user',3);
+INSERT INTO `user_roles` VALUES (1,'admin','administrator'),(2,'mack','administrator'),(3,'sam','registered-user');
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
 --
-SET FOREIGN_KEY_CHECKS=0;
 
 DROP TABLE IF EXISTS `users`;
-SET FOREIGN_KEY_CHECKS=1;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (

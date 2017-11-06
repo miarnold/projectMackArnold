@@ -35,7 +35,7 @@ more detail.
 - [X] Create DAO for user crud
 - [X] Add unit tests for DAO
 - [X] Add user login  
-- [ ] Add user registration
+- [X] Add user registration
 - [X] Time log entries
 - [X] Add Maven for building
 - [X] Add entities for remaining tables

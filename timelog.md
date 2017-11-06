@@ -31,6 +31,7 @@
 | 11/1/17 | we got a TON done for our team project, its almost done, just have to get it to work with the get request format| 4 |   |
 | 11/1/17 | during the entire day i spent the day with aaron and sam trying to get the multithreading done before class | 8 |   |
 | 11/5/17 | worked on getting the add user to add the role and having a lot of problems, had a mental breakdown!| 5 |   |
+| 11/6/17 | finally got add user to work!!! | 2 |   |
 
 
 

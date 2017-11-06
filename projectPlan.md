@@ -14,17 +14,17 @@
 - [X] Complete screen design (on paper)
 - [X] Create project structure in IntelliJ
 - [X] Add project to repository
-- [ ] Complete database design (needs to be done)
-- [ ] Begin creating JSPs (needs to be done)
+- [X] Complete database design (needs to be done)
+- [X] Begin creating JSPs (needs to be done)
 - [X] Time log entries
 - [X] Complete project plan. Based on the design should be able to lay out 
 more detail.
 - [X] Commit, pull, push
 
 ### Week 3
-- [ ] begin JSPs(remember to add gas prices when doing the report)
-- [ ] Add in bootstrap(maybe)
-- [ ] Create database and all tables/columns locally(needs to be done)
+- [X] begin JSPs(remember to add gas prices when doing the report)
+- [X] Add in bootstrap(maybe)
+- [X] Create database and all tables/columns locally(needs to be done)
 - [X] Time log entries
 - [X] Determine independent research topic(needs to be done)
 - [X] Set up logging(need a project first)
@@ -34,45 +34,45 @@ more detail.
 - [X] Add Hibernate config
 - [X] Create DAO for user crud
 - [X] Add unit tests for DAO
-- [ ] Add user login  
+- [X] Add user login  
 - [ ] Add user registration
 - [X] Time log entries
 - [X] Add Maven for building
-- [ ] Add entities for remaining tables
+- [X] Add entities for remaining tables
 - [X] Commit, pull, push
 ### Week 5
 
-- [ ] Time log entries
-- [ ] Create DAO for Commutes
-- [ ] Create DAO for commute report
+- [X] Time log entries
+- [X] Create DAO for Commutes
+- [X] Create DAO for commute report
 - [ ] Create display commute report functionality
 - [ ] Create display commute functionality
 - [ ] Add tests for new functionality
-- [ ] Commit, pull, push
+- [X] Commit, pull, push
 ### Week 6
-- [ ] Time log entries
-- [ ] Integration with google maps api
+- [X] Time log entries
+- [X] Integration with google maps api
 - [ ] Create add commmute report functionality
 - [ ] Create add commute functionality
-- [ ] Commit, pull, push
+- [X] Commit, pull, push
 ### Week 7
-- [ ] Time log entries
-- [ ] Add search functionality
-- [ ] have delpoyed to AWS
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [ ] Add search functionality(not happening anymore)
+- [X] have delpoyed to AWS
+- [X] Commit, pull, push
 ### Week 8
-- [ ] Time log entries
-- [ ] Work more on project
-- [ ] Code review
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [X] Work more on project
+- [X] Code review
+- [X] Commit, pull, push
 ### Week 9
-- [ ] Time log entries
-- [ ] Add password reset/reminder function
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [ ] Add password reset/reminder function(not happening)
+- [X] Commit, pull, push
 ### Week 10
-- [ ] Time log entries
-- [ ] Work more on project
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [X] Work more on project
+- [X] Commit, pull, push
 ### Week 11
 - [ ] Time log entries
 - [ ] Work more on project

@@ -4,34 +4,39 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name = "user_roles")
 public class UserRole {
 
-    @Id
-    @GeneratedValue(generator="increment")
-    @GenericGenerator(name="increment", strategy = "increment")
-    @Column (name="role_id")
     private int roleId;
-    @Column(name = "user_name")
     private String userName;
-
-    @Column(name = "role_name")
     private String roleName;
-
-    @Column(name = "user_id")
-    private int userId;
 
     public UserRole() {
 
     }
 
-    public UserRole(int roleId, String userName, String roleName, int userId) {
+    public UserRole(int roleId, String userName, String roleName) {
         this.roleId = roleId;
         this.userName = userName;
         this.roleName = roleName;
-        this.userId = userId;
+
     }
 
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    @Column (name="role_id")
+    public int getRoleId() {
+        return roleId;
+    }
 
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
+
+    @Basic
+    @Column(name = "user_name")
     public String getUserName() {
         return userName;
     }
@@ -39,7 +44,8 @@ public class UserRole {
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
+    @Basic
+    @Column(name = "role_name")
     public String getRoleName() {
         return roleName;
     }
@@ -49,23 +55,9 @@ public class UserRole {
     }
 
 
-    public int getRoleId() {
-        return roleId;
-    }
 
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
-    }
 
-    @ManyToOne
-    @JoinColumn(name = "users", referencedColumnName = "user_id", nullable = false)
-    public int getUserId() {
-        return userId;
-    }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
 
 
     @Override

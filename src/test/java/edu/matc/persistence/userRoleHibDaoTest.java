@@ -46,9 +46,11 @@ public class userRoleHibDaoTest {
 
     @Test
     public void selectRoleTest() throws Exception {
-        role = roleDao.selectRole(1);
+        logger.info("MACK");
+        role = roleDao.selectRole(2);
+        logger.error("this is the role error: SSSSSSSSSAAAAAAMMMMMMM" + role);
         assertNotNull(role);
-        assertEquals("wrong role returned", 1, role.getRoleId());
+        assertEquals("wrong role returned", 2, role.getRoleId());
     }
 
 
@@ -63,8 +65,7 @@ public class userRoleHibDaoTest {
         role = new UserRole();
         role.setRoleId(4);
         role.setUserName("Dena");
-        role.setRoleName("Administator");
-        role.setUserId(4);
+        role.setRoleName("Administrator");
 
         roleDao.addRole(role);
         assertEquals("Incorrect size of results", listOfRoles + 1, roleDao.getAllRoles().size());

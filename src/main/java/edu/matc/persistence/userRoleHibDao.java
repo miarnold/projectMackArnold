@@ -98,7 +98,7 @@ public class userRoleHibDao {
         Transaction transaction = null;
         try{
             transaction = session.beginTransaction();
-            role = new UserRole(role.getRoleId(),role.getUserName(), role.getRoleName(), role.getUserId());
+            role = new UserRole(role.getRoleId(),role.getUserName(), role.getRoleName());
             session.save(role);
             transaction.commit();
         }catch (HibernateException e) {

@@ -25,14 +25,18 @@ public class CarsServ extends HttpServlet {
 
         addCar.setCarName(req.getParameter("carName"));
         String year = (req.getParameter("yearOfCar"));
-        int YearNumeric = Integer.parseInt(year);
-        addCar.setYearOfMake(YearNumeric);
+        if(year != null) {int YearNumeric = Integer.parseInt(year);
+        addCar.setYearOfMake(YearNumeric);}
         addCar.setVehicleType(req.getParameter("type"));
-        addCar.setCityMiles(Integer.parseInt(req.getParameter("city")));
+        String city = req.getParameter("city");
+        if (city != null) {int cityNumeric = Integer.parseInt(city);
+        addCar.setCityMiles(cityNumeric);}
         String highwayMiles = (req.getParameter("highway"));
-        int highwayMilesNumeric = Integer.parseInt(highwayMiles);
-        addCar.setHighwayMiles(highwayMilesNumeric);
-        addCar.setVin(Integer.parseInt(req.getParameter("vin")));
+        if (highwayMiles != null) {int highwayMilesNumeric = Integer.parseInt(highwayMiles);
+        addCar.setHighwayMiles(highwayMilesNumeric);}
+        String vinString = req.getParameter("vin");
+        if(vinString != null) {int vinNumeric = Integer.parseInt(vinString);
+            addCar.setVin(vinNumeric);}
         addCar.setFuelType(req.getParameter("gas"));
 
         carsHib.addCar(addCar);

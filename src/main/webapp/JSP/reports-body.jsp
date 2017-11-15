@@ -4,7 +4,7 @@
     <form action="MyReports" method="post">
         Name<input type="text" name="name"/>
         <br />
-        Date<<input type="text" name="date"/>
+        Date<input type="text" name="date"/>
         <br />
         Gas Price: $ <input type="text" name="gas"/>
         <br />

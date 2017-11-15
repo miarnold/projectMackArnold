@@ -24,10 +24,14 @@ public class CarsServ extends HttpServlet {
         req.setAttribute("cars", carsHib.getAllCars());
 
         addCar.setCarName(req.getParameter("carName"));
-        addCar.setYearOfMake(Integer.parseInt(req.getParameter("yearOfCar")));
+        String year = (req.getParameter("yearOfCar"));
+        int YearNumeric = Integer.parseInt(year);
+        addCar.setYearOfMake(YearNumeric);
         addCar.setVehicleType(req.getParameter("type"));
         addCar.setCityMiles(Integer.parseInt(req.getParameter("city")));
-        addCar.setHighwayMiles(Integer.parseInt(req.getParameter("highway")));
+        String highwayMiles = (req.getParameter("highway"));
+        int highwayMilesNumeric = Integer.parseInt(highwayMiles);
+        addCar.setHighwayMiles(highwayMilesNumeric);
         addCar.setVin(Integer.parseInt(req.getParameter("vin")));
         addCar.setFuelType(req.getParameter("gas"));
 

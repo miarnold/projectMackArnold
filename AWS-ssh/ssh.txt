@@ -25,3 +25,7 @@ delete from users where user_id=5;
 
 alter table user_roles add column user_id int;
 alter table user_roles add foreign key (user_id) references users(user_id);
+
+
+insert into cars(city_miles, fuel_type, highway_miles,user_id,vehicle_type,VIN,year_of_make,car_name)
+values (24,"Gas", 30, 2, "SUV", "1717171", 2013, "Jeep Compass");

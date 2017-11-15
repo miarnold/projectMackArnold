@@ -22,6 +22,7 @@
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="16" parent="11" name="city_miles">
       <Position>2</Position>

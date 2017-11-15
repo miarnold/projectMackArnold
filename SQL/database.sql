@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: users_test
+-- Host: 127.0.0.1    Database: mackproject
 -- ------------------------------------------------------
 -- Server version	5.7.19-0ubuntu0.16.04.1
 
@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `cars`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cars` (
-  `carID` int(11) NOT NULL,
+  `carID` int(11) NOT NULL AUTO_INCREMENT,
   `city_miles` int(11) NOT NULL,
   `fuel_type` varchar(255) NOT NULL,
   `highway_miles` int(11) NOT NULL,
@@ -31,8 +31,9 @@ CREATE TABLE `cars` (
   `vehicle_type` varchar(255) NOT NULL,
   `VIN` int(11) DEFAULT NULL,
   `year_of_make` int(11) DEFAULT NULL,
+  `car_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`carID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +42,7 @@ CREATE TABLE `cars` (
 
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
+INSERT INTO `cars` VALUES (1,24,'Gas',30,2,'SUV',1717171,2013,'Jeep Compass');
 /*!40000 ALTER TABLE `cars` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-05 12:59:19
+-- Dump completed on 2017-11-15 11:53:03

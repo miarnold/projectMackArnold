@@ -1,7 +1,7 @@
 
     <div class="row content">
         <div class="col-sm-2 sidenav">
-            <p><a href="Cars">My Cars</a></p>
+            <p><a href="CarsServ">My Cars</a></p>
             <p><a href="MyReports">My Reports</a></p>
             <p><a href="GoogleMaps">Google Maps</a></p>
             <p><a href="MyProfile">My Profile</a></p>

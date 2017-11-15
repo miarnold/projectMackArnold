@@ -26,13 +26,13 @@ public class CarsHibDaoTest {
 
 
     @Test
-    public void getAllUsersTest() throws Exception {
+    public void getAllCarsTest() throws Exception {
         List<Cars> cars = carDao.getAllCars();
         assertEquals("Unexpected number of cars returned", listOfCars, cars.size());
     }
 
     @Test
-    public void selectUserTest() throws Exception {
+    public void selectcarsTest() throws Exception {
         carObject = carDao.selectCar(1);
         assertNotNull(carObject);
         assertEquals("wrong car selected", 1, carObject.getCar_id());
@@ -40,7 +40,7 @@ public class CarsHibDaoTest {
 
     @Test
     public void addCarTest() {
-        carObject = new Cars(6,"Coupe", "Gas", 24, 21, 2009,17171717,1);
+        carObject = new Cars(6,"Coupe", "Gas", 24, 21, 2009,17171717,1,"Mini Couper");
         logger.info("---------");
         logger.error(carObject);
         carDao.addCar(carObject);

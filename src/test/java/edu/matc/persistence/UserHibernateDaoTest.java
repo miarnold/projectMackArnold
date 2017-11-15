@@ -14,12 +14,14 @@ public class UserHibernateDaoTest {
     UserHibernateDao userDao;
     User user;
     int listOfUsers;
+    List<User> list;
 
     @Before
     public void setUp() throws Exception {
         userDao = new UserHibernateDao();
         listOfUsers = userDao.getAllUsers().size();
         user = new User();
+
 
     }
     @Test
@@ -34,6 +36,13 @@ public class UserHibernateDaoTest {
         user = userDao.selectUser(1);
         assertNotNull(user);
         assertEquals("wrong password returned", "admin", user.getUserPass());
+    }
+
+    @Test
+    public void selectUserByNameTest() throws Exception {
+        list = userDao.selectuserByName("mack");
+        assertNotNull(user);
+        assertEquals("wrong user returned", "mack", list.contains("mack"));
     }
 
     @Test

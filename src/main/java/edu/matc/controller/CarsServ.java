@@ -1,7 +1,9 @@
 package edu.matc.controller;
 
 import edu.matc.entity.Cars;
+import edu.matc.entity.User;
 import edu.matc.persistence.CarsHibDao;
+import edu.matc.persistence.UserHibernateDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet (
         urlPatterns = {"/CarsServ"}
@@ -20,8 +24,15 @@ public class CarsServ extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Cars addCar = new Cars();
+        User user = new User();
+        UserHibernateDao userDao = new UserHibernateDao();
         CarsHibDao carsHib = new CarsHibDao();
         req.setAttribute("cars", carsHib.getAllCars());
+        String userNameOfCurrentUser = req.getRemoteUser();
+        List<User> userList = new ArrayList<User>();
+        //userList.add(userNameOfCurrentUser);
+        userList = userDao.selectuserByName(userNameOfCurrentUser);
+
 
         addCar.setCarName(req.getParameter("carName"));
         String year = (req.getParameter("yearOfCar"));

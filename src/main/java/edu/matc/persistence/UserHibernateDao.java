@@ -2,9 +2,11 @@ package edu.matc.persistence;
 
 import edu.matc.entity.User;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +69,25 @@ public class UserHibernateDao {
         }
         return user;
     }
+
+    public List<User> selectuserByName(String username) {
+        List<User> users = new ArrayList<User>();
+        Session session = null;
+        try {
+            session = SessionFactoryProvider.getSessionFactory().openSession();
+            Criteria criteria = session.createCriteria(User.class);
+            criteria.add(Restrictions.eq("username", username));
+            users = criteria.list();
+        } catch (HibernateException he) {
+            log.error("Error getting all users with last name: " + username, he);
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return users;
+    }
+
 
 
 

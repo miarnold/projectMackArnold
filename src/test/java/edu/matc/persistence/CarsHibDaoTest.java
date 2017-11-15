@@ -25,6 +25,8 @@ public class CarsHibDaoTest {
 
 
 
+
+
     @Test
     public void getAllCarsTest() throws Exception {
         List<Cars> cars = carDao.getAllCars();

@@ -25,12 +25,9 @@ DROP TABLE IF EXISTS `cars`;
 CREATE TABLE `cars` (
   `carID` int(11) NOT NULL,
   `city_miles` int(11) NOT NULL,
-  `driving_wheels` varchar(255) DEFAULT NULL,
   `fuel_type` varchar(255) NOT NULL,
   `highway_miles` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `vehicle_category` varchar(255) DEFAULT NULL,
-  `vehicle_size` varchar(255) DEFAULT NULL,
   `vehicle_type` varchar(255) NOT NULL,
   `VIN` int(11) DEFAULT NULL,
   `year_of_make` int(11) DEFAULT NULL,

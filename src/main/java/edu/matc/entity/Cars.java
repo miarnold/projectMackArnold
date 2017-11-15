@@ -16,14 +16,8 @@ public class Cars {
     private int car_id;
     @Column(name = "vehicle_type", nullable = false)
     private String vehicleType;
-    @Column(name = "vehicle_category")
-    private String vehicleCategory;
-    @Column(name = "vehicle_size")
-    private String vehicleSize;
     @Column(name = "fuel_type", nullable = false)
     private String fuelType;
-    @Column(name = "driving_wheels")
-    private String drivingWheels;
     @Column(name = "highway_miles", nullable = false)
     private int highwayMiles;
     @Column(name = "city_miles", nullable = false)
@@ -34,26 +28,27 @@ public class Cars {
     private int vin;
     @Column(name="user_id")
     private int userId;
+    @Column(name="car_name")
+    private String carName;
 
 
     public Cars() {
 
     }
 
-    public Cars ( int car_id, String vehicleType, String vehicleCategory, String vehicleSize,
-                 String fuelType, String drivingWheels, int highwayMiles, int cityMiles,
-                 int yearOfMake, int vin, int userId) {
+
+
+    public Cars (int car_id, String vehicleType, String fuelType, int highwayMiles, int cityMiles,
+                 int yearOfMake, int vin, int userId, String carName) {
         this.car_id = car_id;
         this.vehicleType = vehicleType;
-        this.vehicleCategory = vehicleCategory;
-        this.vehicleSize = vehicleSize;
         this.fuelType = fuelType;
-        this.drivingWheels = drivingWheels;
         this.highwayMiles = highwayMiles;
         this.cityMiles = cityMiles;
         this.yearOfMake = yearOfMake;
         this.vin = vin;
         this.userId = userId;
+        this.carName = carName;
 
     }
 
@@ -75,36 +70,12 @@ public class Cars {
         this.vehicleType = vehicleType;
     }
 
-    public String getVehicleCategory() {
-        return vehicleCategory;
-    }
-
-    public void setVehicleCategory(String vehicleCategory) {
-        this.vehicleCategory = vehicleCategory;
-    }
-
-    public String getVehicleSize() {
-        return vehicleSize;
-    }
-
-    public void setVehicleSize(String vehicleSize) {
-        this.vehicleSize = vehicleSize;
-    }
-
     public String getFuelType() {
         return fuelType;
     }
 
     public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
-    }
-
-    public String getDrivingWheels() {
-        return drivingWheels;
-    }
-
-    public void setDrivingWheels(String drivingWheels) {
-        this.drivingWheels = drivingWheels;
     }
 
     public int getHighwayMiles() {
@@ -137,6 +108,14 @@ public class Cars {
 
     public void setVin(int vin) {
         this.vin = vin;
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public void setCarName(String carName) {
+        this.carName = carName;
     }
 
     @ManyToOne()

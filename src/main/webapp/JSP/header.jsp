@@ -69,4 +69,3 @@
         </div>
     </div>
 </nav>
-<div class="container-fluid text-center">

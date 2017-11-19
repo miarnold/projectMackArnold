@@ -6,5 +6,5 @@
         <p>Car2</p>
     </div>
 </div>
-</div>
+
 </div>

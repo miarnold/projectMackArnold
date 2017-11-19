@@ -19,7 +19,7 @@ mapping out where you went and how far you went. Another one I was thinking abou
 edmunds is an API that you use to get all vehicle information, from pictures to gas mileage. And if I have time
 I will look into a gas prices API that tells you the current gas prices and your can use that in the report.
 
-individual research topic: AWS relation Database
+individual research topic: Dont have time to do it...
 
 ### Project Technologies/Techniques 
 
@@ -32,7 +32,6 @@ individual research topic: AWS relation Database
   * Store commuting information
 * Web Services or APIs
   * Google Maps for Commuter Travels
-  * Edmunds for car information
 * Logging
   * Configurable logging using Log4J. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
 * Site and database hosted on AWS

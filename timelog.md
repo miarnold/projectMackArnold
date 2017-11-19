@@ -32,6 +32,10 @@
 | 11/1/17 | during the entire day i spent the day with aaron and sam trying to get the multithreading done before class | 8 |   |
 | 11/5/17 | worked on getting the add user to add the role and having a lot of problems, had a mental breakdown!| 5 |   |
 | 11/6/17 | finally got add user to work!!! | 2 |   |
+| 11/8/17 | started working on the add car! | 9 |   |
+| 11/13/17 | trying to figure out how to get the current user info | 4 |   |
+| 11/15/17 | working with paula and peers to get the current user info | 2 |   |
+| 11/19/17 | finally just got the current user username and use that for add car! | 8 |   |
 
 
 

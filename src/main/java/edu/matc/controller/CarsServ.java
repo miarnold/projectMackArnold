@@ -4,6 +4,7 @@ import edu.matc.entity.Cars;
 import edu.matc.entity.User;
 import edu.matc.persistence.CarsHibDao;
 import edu.matc.persistence.UserHibernateDao;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,6 +21,8 @@ import java.util.List;
 )
 
 public class CarsServ extends HttpServlet {
+
+    private final Logger log = Logger.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -29,10 +32,10 @@ public class CarsServ extends HttpServlet {
         CarsHibDao carsHib = new CarsHibDao();
         req.setAttribute("cars", carsHib.getAllCars());
         String userNameOfCurrentUser = req.getRemoteUser();
-        List<User> userList = new ArrayList<User>();
+        //List<User> userList = new ArrayList<User>();
         //userList.add(userNameOfCurrentUser);
-        userList = userDao.selectuserByName(userNameOfCurrentUser);
-
+        //userList = userDao.selectuserByName(userNameOfCurrentUser);
+        //log.info(userList);
 
         addCar.setCarName(req.getParameter("carName"));
         String year = (req.getParameter("yearOfCar"));
@@ -48,6 +51,7 @@ public class CarsServ extends HttpServlet {
         String vinString = req.getParameter("vin");
         if(vinString != null) {int vinNumeric = Integer.parseInt(vinString);
             addCar.setVin(vinNumeric);}
+        addCar.setUsername(userNameOfCurrentUser);
         addCar.setFuelType(req.getParameter("gas"));
 
         carsHib.addCar(addCar);

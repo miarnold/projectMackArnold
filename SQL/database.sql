@@ -27,7 +27,7 @@ CREATE TABLE `cars` (
   `city_miles` int(11) NOT NULL,
   `fuel_type` varchar(255) NOT NULL,
   `highway_miles` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
+  `user_name` varchar(50) DEFAULT NULL,
   `vehicle_type` varchar(255) NOT NULL,
   `VIN` int(11) DEFAULT NULL,
   `year_of_make` int(11) DEFAULT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE `cars` (
 
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
-INSERT INTO `cars` VALUES (1,24,'Gas',30,2,'SUV',1717171,2013,'Jeep Compass');
+/*INSERT INTO `cars` VALUES (1,24,'Gas',30,2,'SUV',1717171,2013,'Jeep Compass');*/
 /*!40000 ALTER TABLE `cars` ENABLE KEYS */;
 UNLOCK TABLES;
 

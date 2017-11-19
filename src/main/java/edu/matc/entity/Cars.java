@@ -26,8 +26,8 @@ public class Cars {
     private int yearOfMake;
     @Column(name = "VIN")
     private int vin;
-    @Column(name="user_id")
-    private int userId;
+    @Column(name="user_name")
+    private String userName;
     @Column(name="car_name")
     private String carName;
 
@@ -39,7 +39,7 @@ public class Cars {
 
 
     public Cars (int car_id, String vehicleType, String fuelType, int highwayMiles, int cityMiles,
-                 int yearOfMake, int vin, int userId, String carName) {
+                 int yearOfMake, int vin, String userName, String carName) {
         this.car_id = car_id;
         this.vehicleType = vehicleType;
         this.fuelType = fuelType;
@@ -47,7 +47,7 @@ public class Cars {
         this.cityMiles = cityMiles;
         this.yearOfMake = yearOfMake;
         this.vin = vin;
-        this.userId = userId;
+        this.userName = userName;
         this.carName = carName;
 
     }
@@ -118,14 +118,12 @@ public class Cars {
         this.carName = carName;
     }
 
-    @ManyToOne()
-    @JoinColumn(name = "user_id", nullable = false)
-    public int getUserId() {
-        return userId;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUserId(int vin) {
-        this.userId = userId;
+    public void setUsername(String userName) {
+        this.userName = userName;
     }
 
 

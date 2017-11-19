@@ -70,24 +70,6 @@ public class UserHibernateDao {
         return user;
     }
 
-    public List<User> selectuserByName(String username) {
-        List<User> users = new ArrayList<User>();
-        Session session = null;
-        try {
-            session = SessionFactoryProvider.getSessionFactory().openSession();
-            Criteria criteria = session.createCriteria(User.class);
-            criteria.add(Restrictions.eq("username", username));
-            users = criteria.list();
-        } catch (HibernateException he) {
-            log.error("Error getting all users with last name: " + username, he);
-        } finally {
-            if (session != null) {
-                session.close();
-            }
-        }
-        return users;
-    }
-
 
 
 

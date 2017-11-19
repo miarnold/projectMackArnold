@@ -54,7 +54,7 @@ public class CarsHibDao {
             transaction = session.beginTransaction();
             car = new Cars(car.getCar_id(),car.getVehicleType(),
                     car.getFuelType(), car.getHighwayMiles(), car.getCityMiles(),
-                     car.getYearOfMake(), car.getVin(), car.getUserId(),car.getCarName());
+                     car.getYearOfMake(), car.getVin(), car.getUserName(),car.getCarName());
             session.save(car);
             transaction.commit();
         }catch (HibernateException e) {

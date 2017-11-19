@@ -39,9 +39,9 @@
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="11" name="user_id">
+    <column id="19" parent="11" name="user_name">
       <Position>5</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(50)|0</DataType>
     </column>
     <column id="20" parent="11" name="vehicle_type">
       <Position>6</Position>

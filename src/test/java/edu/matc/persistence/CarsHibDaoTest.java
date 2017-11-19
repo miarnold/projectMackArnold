@@ -42,7 +42,7 @@ public class CarsHibDaoTest {
 
     @Test
     public void addCarTest() {
-        carObject = new Cars(6,"Coupe", "Gas", 24, 21, 2009,17171717,1,"Mini Couper");
+        carObject = new Cars(6,"Coupe", "Gas", 24, 21, 2009,17171717,"sam","Mini Couper");
         logger.info("---------");
         logger.error(carObject);
         carDao.addCar(carObject);

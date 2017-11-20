@@ -42,7 +42,7 @@
             }
             .panel {
                 height: 100%;
-                overflow: auto;
+                /*overflow: auto;*/
             }
         </style>
     </head>
@@ -78,7 +78,7 @@
             service.route({
                 origin: origin,
                 destination: destination,
-                waypoints: [{location: 'Madison, WI'}, {location: 'Columbus, WI'}],
+                //waypoints: [{location: 'Madison, WI'}, {location: 'Columbus, WI'}],
                 travelMode: 'DRIVING',
                 avoidTolls: true
             }, function(response, status) {
@@ -96,7 +96,7 @@
             for (var i = 0; i < myroute.legs.length; i++) {
                 total += myroute.legs[i].distance.value;
             }
-            //total = total / 1000;
+            total = total / 1000;
             document.getElementById('total').innerHTML = total + ' Miles';
         }
     </script>

@@ -56,7 +56,7 @@ DROP TABLE IF EXISTS `routes`;
 CREATE TABLE `routes` (
   `route_id` int(11) NOT NULL,
   `notes` varchar(255) DEFAULT NULL,
-  `date` varchar(255) DEFAULT sysdate() NOT NULL,
+  `date` varchar(255) NOT NULL,
   `Driver_name` varchar(255) DEFAULT NULL,
   `gas_price` double DEFAULT NULL,
   `number_of_city_miles` int(11) DEFAULT NULL,

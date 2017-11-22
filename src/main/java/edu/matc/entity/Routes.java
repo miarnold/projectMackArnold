@@ -31,8 +31,10 @@ public class Routes {
     private double gasPrice;
     @Column(name = "notes")
     private String commuteNotes;
-    @Column (name="user_id")
-    private int userId;
+    @Column (name="user_name")
+    private String userName;
+    @Column (name="total")
+    private String total;
 
     public Routes() {
 
@@ -40,7 +42,7 @@ public class Routes {
 
     public Routes(int routeId, String driverName,int numberOfMiles, int numberOfHighwayMiles,
                   int numberOfCityMiles, String whichCar, String dateOfTrip, double gasPrice,
-                  String commuteNotes, int userId) {
+                  String commuteNotes, String userName, String total) {
 
         this.routeId = routeId;
         this.driverName = driverName;
@@ -51,7 +53,8 @@ public class Routes {
         this.dateOfTrip = dateOfTrip;
         this.gasPrice = gasPrice;
         this.commuteNotes = commuteNotes;
-        this.userId = userId;
+        this.userName = userName;
+        this.total = total;
 
     }
 
@@ -129,12 +132,20 @@ public class Routes {
 
     @ManyToOne()
     @JoinColumn(name="user_id", nullable = false)
-    public int getUserid() {
-        return userId;
+    public String getUsername() {
+        return userName;
     }
 
-    public void setUserid(int userid) {
-        this.userId = userid;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
     }
 
 

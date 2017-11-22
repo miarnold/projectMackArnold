@@ -1,5 +1,6 @@
 package edu.matc.controller;
 
+import edu.matc.entity.Routes;
 import edu.matc.persistence.CarsHibDao;
 
 import javax.servlet.RequestDispatcher;
@@ -20,6 +21,13 @@ public class MyReports extends HttpServlet {
 
         CarsHibDao carsHib = new CarsHibDao();
         req.setAttribute("cars", carsHib.getAllCars());
+        Routes addRoute = new Routes();
+
+
+
+
+
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("/JSP/reports.jsp");
         dispatcher.forward(req, resp);
 

@@ -99,9 +99,10 @@
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="33" parent="12" name="user_id">
+    <column id="33" parent="12" name="user_name">
       <Position>9</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="34" parent="12" name="which_car">
       <Position>10</Position>

@@ -62,7 +62,7 @@ CREATE TABLE `routes` (
   `number_of_city_miles` int(11) DEFAULT NULL,
   `number_of_high_way_miles` int(11) DEFAULT NULL,
   `number_of_miles` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
+  `user_name` varchar(50) DEFAULT NOT NULL,
   `which_car` varchar(255) DEFAULT NULL,
   `total` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`route_id`)

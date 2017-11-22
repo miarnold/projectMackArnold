@@ -41,7 +41,7 @@ CREATE TABLE `routes` (
 
 LOCK TABLES `routes` WRITE;
 
-INSERT INTO `routes` VALUES (1,'this was a great ride','11-22-2017','Mack',2.45,23,45,68,'mack','compass','$100');
+INSERT INTO `routes` VALUES (1,'this was a great ride','11-22-2017','Mack',2.45,23,45,68,'mack','compass','$100'),(7,'delete testing','11-25-2017','sam',0.00,12,12,24,'mack','trek wingra','$0.00');
 
 UNLOCK TABLES;
 

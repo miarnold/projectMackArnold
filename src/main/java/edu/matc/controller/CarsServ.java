@@ -32,10 +32,6 @@ public class CarsServ extends HttpServlet {
         CarsHibDao carsHib = new CarsHibDao();
         req.setAttribute("cars", carsHib.getAllCars());
         String userNameOfCurrentUser = req.getRemoteUser();
-        //List<User> userList = new ArrayList<User>();
-        //userList.add(userNameOfCurrentUser);
-        //userList = userDao.selectuserByName(userNameOfCurrentUser);
-        //log.info(userList);
 
         addCar.setCarName(req.getParameter("carName"));
         String year = (req.getParameter("yearOfCar"));

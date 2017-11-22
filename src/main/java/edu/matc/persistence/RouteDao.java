@@ -16,12 +16,12 @@ public class RouteDao {
     private final Logger log = Logger.getLogger(this.getClass());
 
 
-    public List<Cars> getAllRoutes() {
-        List<Cars> cars = new ArrayList<Cars>();
+    public List<Routes> getAllRoutes() {
+        List<Routes> routes = new ArrayList<Routes>();
         Session session = null;
         try {
             session = SessionFactoryProvider.getSessionFactory().openSession();
-            cars = session.createCriteria(Routes.class).list();
+            routes = session.createCriteria(Routes.class).list();
         } catch (HibernateException he) {
             log.error("Error getting all users", he);
         } finally {
@@ -29,7 +29,7 @@ public class RouteDao {
                 session.close();
             }
         }
-        return cars;
+        return routes;
     }
 
     public void deleteRoute(int routeId){

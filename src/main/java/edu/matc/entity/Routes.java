@@ -3,6 +3,7 @@ package edu.matc.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @Entity
@@ -25,7 +26,7 @@ public class Routes {
     @Column(name = "which_car")
     private String whichCar;
     @Column(name = "date")
-    private LocalDate dateOfTrip;
+    private String dateOfTrip;
     @Column(name = "gas_price")
     private double gasPrice;
     @Column(name = "notes")
@@ -38,7 +39,7 @@ public class Routes {
     }
 
     public Routes(int routeId, String driverName,int numberOfMiles, int numberOfHighwayMiles,
-                  int numberOfCityMiles, String whichCar, LocalDate dateOfTrip, double gasPrice,
+                  int numberOfCityMiles, String whichCar, String dateOfTrip, double gasPrice,
                   String commuteNotes, int userId) {
 
         this.routeId = routeId;
@@ -102,11 +103,11 @@ public class Routes {
         this.whichCar = whichCar;
     }
 
-    public LocalDate getDateOfTrip() {
+    public String getDateOfTrip() {
         return dateOfTrip;
     }
 
-    public void setDateOfTrip(LocalDate dateOfTrip) {
+    public void setDateOfTrip(String dateOfTrip) {
         this.dateOfTrip = dateOfTrip;
     }
 

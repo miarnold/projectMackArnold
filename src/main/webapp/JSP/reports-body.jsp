@@ -14,7 +14,9 @@
         <br />
         City miles: <input type="text" name="city"/>
         <br />
-        Total Number Of Miles: <input type="text" name="total"/>
+        City MPG: <input type="text" name="cmpg"/>
+        <br />
+        Highway MPG: <input type="text" name="hmpg"/>
         <br />
         Additional Notes: <input type="text" name="notes"/>
         <br />

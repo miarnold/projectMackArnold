@@ -23,8 +23,7 @@ public class MyReports extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-         int cityInt;
-         int highInt;
+
 
 
         RouteDao dao = new RouteDao();
@@ -37,19 +36,28 @@ public class MyReports extends HttpServlet {
         addRoute.setCommuteNotes(req.getParameter("notes"));
         addRoute.setDateOfTrip(req.getParameter("date"));
         String gas = req.getParameter("gas");
-        if(gas != null) {Double gasDouble = Double.parseDouble(gas);
+        if(gas != null) {double gasDouble = Double.parseDouble(gas);
         addRoute.setGasPrice(gasDouble);}
         String cityMiles = req.getParameter("city");
-        if(cityMiles != null) { cityInt = Integer.parseInt(cityMiles);
+        if(cityMiles != null) { int cityInt = Integer.parseInt(cityMiles);
             addRoute.setNumberOfCityMiles(cityInt); }
         String highMiles = req.getParameter("highway");
-        if(highMiles != null) { highInt = Integer.parseInt(highMiles);
+        if(highMiles != null) { int highInt = Integer.parseInt(highMiles);
             addRoute.setNumberOfHighwayMiles(highInt); }
         addRoute.setWhichCar(req.getParameter("car"));
 
         int totalNumberOfMiles = (addRoute.getNumberOfCityMiles() + addRoute.getNumberOfHighwayMiles());
         addRoute.setNumberOfMiles(totalNumberOfMiles);
 
+
+
+
+
+
+
+        double totalMoney = (((double)addRoute.getNumberOfCityMiles() * addRoute.getGasPrice()) + (double)addRoute.getNumberOfHighwayMiles() * addRoute.getGasPrice());
+        String totalMoneyString = String.valueOf(totalMoney);
+        addRoute.setTotal(totalMoneyString);
         addRoute.setUserName(userNameOfCurrentUser);
 
         dao.addRoute(addRoute);

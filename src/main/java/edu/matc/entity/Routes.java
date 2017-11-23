@@ -46,7 +46,7 @@ public class Routes {
 
     public Routes(int routeId, String driverName,int numberOfMiles, int numberOfHighwayMiles,
                   int numberOfCityMiles, String whichCar, String dateOfTrip, double gasPrice,
-                  String commuteNotes, String userName, String total) {
+                  String commuteNotes, String userName, String total, String mpgCity, String mpgHigh) {
 
         this.routeId = routeId;
         this.driverName = driverName;
@@ -59,6 +59,8 @@ public class Routes {
         this.commuteNotes = commuteNotes;
         this.userName = userName;
         this.total = total;
+        this.mpgCity = mpgCity;
+        this.mpgHigh = mpgHigh;
 
     }
 

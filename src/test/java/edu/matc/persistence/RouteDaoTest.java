@@ -37,7 +37,7 @@ public class RouteDaoTest {
 
     @Test
     public void addRoute() throws Exception {
-        routeObject = new Routes(6,"Sam",24,12,12,"trek wingra","11-25-2017",2.45,"this is a test","mack","$12.54");
+        routeObject = new Routes(6,"Sam",24,12,12,"trek wingra","11-25-2017",2.45,"this is a test","mack","$12.54","21","45");
         routeDao.addRoute(routeObject);
         assertEquals("Incorrect size of results", listOfRoutes + 1, routeDao.getAllRoutes().size());
     }

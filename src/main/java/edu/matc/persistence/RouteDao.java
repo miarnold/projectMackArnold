@@ -53,7 +53,7 @@ public class RouteDao {
         Transaction transaction = null;
         try{
             transaction = session.beginTransaction();
-            route = new Routes(route.getRouteId(),route.getDriverName(),route.getNumberOfMiles(),route.getNumberOfHighwayMiles(),route.getNumberOfCityMiles(),route.getWhichCar(),route.getDateOfTrip(),route.getGasPrice(),route.getCommuteNotes(),route.getUsername(),route.getTotal());
+            route = new Routes(route.getRouteId(),route.getDriverName(),route.getNumberOfMiles(),route.getNumberOfHighwayMiles(),route.getNumberOfCityMiles(),route.getWhichCar(),route.getDateOfTrip(),route.getGasPrice(),route.getCommuteNotes(),route.getUsername(),route.getTotal(),route.getMpgCity(),route.getMpgHigh());
             session.save(route);
             transaction.commit();
         }catch (HibernateException e) {

@@ -48,17 +48,17 @@ public class MyReports extends HttpServlet {
 
         int totalNumberOfMiles = (addRoute.getNumberOfCityMiles() + addRoute.getNumberOfHighwayMiles());
         addRoute.setNumberOfMiles(totalNumberOfMiles);
+        addRoute.setMpgCity(req.getParameter("cmpg"));
+        addRoute.setMpgHigh(req.getParameter("hmpg"));
 
 
-        String mpgCity = req.getParameter("cmpg");
-        String mpgHigh = req.getParameter("hmpg");
-        double mpgcd;
-        double mpghd;
-        if (mpgCity != null) {mpgcd = Double.parseDouble(mpgCity);}
-        if (mpgHigh != null) {mpghd = Double.parseDouble(mpgHigh);}
-        double totalMoney = ((mpgcd * addRoute.getGasPrice()) + (mpghd * addRoute.getGasPrice()));
-        String totalMoneyString = String.valueOf(totalMoney);
-        addRoute.setTotal(totalMoneyString);
+        //double cityMPG = Double.parseDouble(addRoute.getMpgCity());
+        //double highMPG = Double.parseDouble(addRoute.getMpgHigh());
+        if (addRoute.getMpgCity() != null && addRoute.getMpgHigh() != null) {
+            double totalMoney = (((addRoute.getNumberOfCityMiles() / Double.parseDouble(addRoute.getMpgCity())) * addRoute.getGasPrice()) + ((addRoute.getNumberOfHighwayMiles() / Double.parseDouble(addRoute.getMpgHigh())) * addRoute.getGasPrice()));
+            String totalMoneyString = String.valueOf(totalMoney);
+            addRoute.setTotal(totalMoneyString);
+        }
 
 
         addRoute.setUserName(userNameOfCurrentUser);

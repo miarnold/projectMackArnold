@@ -1,7 +1,7 @@
 <body>
 <div class="col-sm-8 text-middle">
     <p>Create a new report!</p>
-    <form action="MyReports" method="post">
+    <form action="MyReports">
         Name<input type="text" name="name"/>
         <br />
         Date<input type="text" name="date"/>
@@ -18,7 +18,7 @@
         <br />
         Additional Notes: <input type="text" name="notes"/>
         <br />
-        <input type="button" name="button"/>
+        <button type="submit">Submit</button>
     </form>
 
 </div>

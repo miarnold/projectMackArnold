@@ -17,8 +17,15 @@ import java.io.IOException;
 )
 
 public class MyReports extends HttpServlet {
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
+         int cityInt;
+         int highInt;
+
 
         RouteDao dao = new RouteDao();
         CarsHibDao carsHib = new CarsHibDao();
@@ -33,13 +40,17 @@ public class MyReports extends HttpServlet {
         if(gas != null) {Double gasDouble = Double.parseDouble(gas);
         addRoute.setGasPrice(gasDouble);}
         String cityMiles = req.getParameter("city");
-        if(cityMiles != null) { int cityInt = Integer.parseInt(cityMiles);
+        if(cityMiles != null) { cityInt = Integer.parseInt(cityMiles);
             addRoute.setNumberOfCityMiles(cityInt); }
         String highMiles = req.getParameter("highway");
-        if(highMiles != null) { int highInt = Integer.parseInt(highMiles);
+        if(highMiles != null) { highInt = Integer.parseInt(highMiles);
             addRoute.setNumberOfHighwayMiles(highInt); }
-        addRoute.setTotal(req.getParameter("total"));
         addRoute.setWhichCar(req.getParameter("car"));
+
+        int totalNumberOfMiles = (addRoute.getNumberOfCityMiles() + addRoute.getNumberOfHighwayMiles());
+        addRoute.setNumberOfMiles(totalNumberOfMiles);
+
+        addRoute.setUserName(userNameOfCurrentUser);
 
         dao.addRoute(addRoute);
 

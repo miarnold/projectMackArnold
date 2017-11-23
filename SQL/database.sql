@@ -65,8 +65,10 @@ CREATE TABLE `routes` (
   `user_name` varchar(50) NOT NULL,
   `which_car` varchar(255) DEFAULT NULL,
   `total` varchar(255) DEFAULT NULL,
+  `MPGCity` varchar(255) DEFAULT NULL,
+  `MPGHigh` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`route_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +77,7 @@ CREATE TABLE `routes` (
 
 LOCK TABLES `routes` WRITE;
 /*!40000 ALTER TABLE `routes` DISABLE KEYS */;
-INSERT INTO `routes` VALUES (1,'this was a great ride','11-22-2017','Mack',2.45,23,45,68,'mack','compass','$100');
+INSERT INTO `routes` VALUES (1,'this was a great ride','11-22-2017','Mack',2.45,23,45,68,'mack','compass','$100',NULL,NULL),(3,'it was a great trip','11-25-2017','mack',2.46,23,45,0,'mack','compass','68',NULL,NULL),(5,'let see if this works','11-45-2017','mack',2.45,65,45,110,'mack','compass','269.5',NULL,NULL);
 /*!40000 ALTER TABLE `routes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-22 16:20:59
+-- Dump completed on 2017-11-22 19:06:54

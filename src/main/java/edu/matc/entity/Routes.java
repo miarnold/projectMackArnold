@@ -35,6 +35,10 @@ public class Routes {
     private String userName;
     @Column (name="total")
     private String total;
+    @Column(name="MPGCity")
+    private String mpgCity;
+    @Column(name="MPGHigh")
+    private String mpgHigh;
 
     public Routes() {
 
@@ -146,6 +150,22 @@ public class Routes {
 
     public void setTotal(String total) {
         this.total = total;
+    }
+
+    public String getMpgCity() {
+        return mpgCity;
+    }
+
+    public void setMpgCity(String mpgCity) {
+        this.mpgCity = mpgCity;
+    }
+
+    public String getMpgHigh() {
+        return mpgHigh;
+    }
+
+    public void setMpgHigh(String mpgHigh) {
+        this.mpgHigh = mpgHigh;
     }
 
 

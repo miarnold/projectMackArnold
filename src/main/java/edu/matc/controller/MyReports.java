@@ -50,14 +50,17 @@ public class MyReports extends HttpServlet {
         addRoute.setNumberOfMiles(totalNumberOfMiles);
 
 
-
-
-
-
-
-        double totalMoney = (((double)addRoute.getNumberOfCityMiles() * addRoute.getGasPrice()) + (double)addRoute.getNumberOfHighwayMiles() * addRoute.getGasPrice());
+        String mpgCity = req.getParameter("cmpg");
+        String mpgHigh = req.getParameter("hmpg");
+        double mpgcd;
+        double mpghd;
+        if (mpgCity != null) {mpgcd = Double.parseDouble(mpgCity);}
+        if (mpgHigh != null) {mpghd = Double.parseDouble(mpgHigh);}
+        double totalMoney = ((mpgcd * addRoute.getGasPrice()) + (mpghd * addRoute.getGasPrice()));
         String totalMoneyString = String.valueOf(totalMoney);
         addRoute.setTotal(totalMoneyString);
+
+
         addRoute.setUserName(userNameOfCurrentUser);
 
         dao.addRoute(addRoute);

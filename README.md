@@ -32,6 +32,7 @@ individual research topic: Dont have time to do it...
   * Store commuting information
 * Web Services or APIs
   * Google Maps for Commuter Travels
+  * maybe a car picture API
 * Logging
   * Configurable logging using Log4J. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
 * Site and database hosted on AWS

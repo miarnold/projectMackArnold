@@ -36,6 +36,9 @@
 | 11/13/17 | trying to figure out how to get the current user info | 4 |   |
 | 11/15/17 | working with paula and peers to get the current user info | 2 |   |
 | 11/19/17 | finally just got the current user username and use that for add car! | 8 |   |
+| 11/20/17 | trying to get the add reports to work | 3 |   |
+| 11/22/17 | finally got the add reports work and got the delete a user to work | 8 |   |
+| 11/27/17 | trying to get it where you can delete a car from any page on the right side bar | 3 |   |
 
 
 

@@ -45,15 +45,15 @@ more detail.
 - [X] Time log entries
 - [X] Create DAO for Commutes
 - [X] Create DAO for commute report
-- [ ] Create display commute report functionality
-- [ ] Create display commute functionality
-- [ ] Add tests for new functionality
+- [X] Create display commute report functionality
+- [X] Create display commute functionality
+- [X] Add tests for new functionality
 - [X] Commit, pull, push
 ### Week 6
 - [X] Time log entries
 - [X] Integration with google maps api
-- [ ] Create add commmute report functionality
-- [ ] Create add commute functionality
+- [X] Create add commmute report functionality
+- [X] Create add commute functionality
 - [X] Commit, pull, push
 ### Week 7
 - [X] Time log entries
@@ -74,17 +74,18 @@ more detail.
 - [X] Work more on project
 - [X] Commit, pull, push
 ### Week 11
-- [ ] Time log entries
-- [ ] Work more on project
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [X] Work more on project
+- [X] Commit, pull, push
 ### Week 12
-- [ ] Time log entries
-- [ ] Work more on project
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [X] Work more on project
+- [X] Commit, pull, push
 ### Week 13
 - [ ] Time log entries
 - [ ] Work more on project
 - [ ] Commit, pull, push
+- [ ] Get ready because I present next week
 ### Week 14
 - [ ] Time log entries
 - [ ] Create final presentation

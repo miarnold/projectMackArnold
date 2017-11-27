@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 @WebServlet (
         urlPatterns = {"/MyReports"}
@@ -31,6 +32,7 @@ public class MyReports extends HttpServlet {
         req.setAttribute("cars", carsHib.getAllCars());
         String userNameOfCurrentUser = req.getRemoteUser();
         Routes addRoute = new Routes();
+        DecimalFormat decimalFormat = new DecimalFormat("0.##");
 
         addRoute.setDriverName(req.getParameter("name"));
         addRoute.setCommuteNotes(req.getParameter("notes"));
@@ -56,6 +58,7 @@ public class MyReports extends HttpServlet {
         //double highMPG = Double.parseDouble(addRoute.getMpgHigh());
         if (addRoute.getMpgCity() != null && addRoute.getMpgHigh() != null) {
             double totalMoney = (((addRoute.getNumberOfCityMiles() / Double.parseDouble(addRoute.getMpgCity())) * addRoute.getGasPrice()) + ((addRoute.getNumberOfHighwayMiles() / Double.parseDouble(addRoute.getMpgHigh())) * addRoute.getGasPrice()));
+            decimalFormat.format(totalMoney);
             String totalMoneyString = String.valueOf(totalMoney);
             addRoute.setTotal(totalMoneyString);
         }

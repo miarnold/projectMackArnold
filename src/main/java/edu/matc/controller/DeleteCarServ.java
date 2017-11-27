@@ -35,7 +35,7 @@ public class DeleteCarServ extends HttpServlet {
 
         carHib.deleteCar(id);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/JSP/index.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
         dispatcher.forward(req, resp);
     }
 

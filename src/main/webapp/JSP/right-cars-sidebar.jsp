@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <!--${cars}-->
-        <form action="DeleteServ" method="POST">
+        <form action="DeleteCarServ" method="POST">
         <table id="carTable" class="display" style="width:100%">
             <c:forEach items="${cars}" var="car">
 

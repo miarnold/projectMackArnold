@@ -5,5 +5,4 @@
 
 <%@include file="sidebar.jsp"%>
 <%@include file="faq-body.jsp"%>
-<%@include file="right-cars-sidebar.jsp"%>
 <%@include file="footer.jsp"%>

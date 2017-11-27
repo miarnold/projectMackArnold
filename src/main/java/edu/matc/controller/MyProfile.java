@@ -1,5 +1,7 @@
 package edu.matc.controller;
 
+import edu.matc.persistence.CarsHibDao;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +20,9 @@ public class MyProfile extends HttpServlet {
 
 
         String userNameOfCurrentUser = req.getRemoteUser();
+
+        CarsHibDao carsHib = new CarsHibDao();
+        req.setAttribute("cars", carsHib.getAllCars());
 
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("JSP/profile.jsp");

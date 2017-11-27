@@ -20,7 +20,7 @@
                 </tr>
             </c:forEach>
         </table>
-            <button type="submit">Delete users</button>
+            <button type="submit">Delete User</button>
         </form>
     </div>
 </div>

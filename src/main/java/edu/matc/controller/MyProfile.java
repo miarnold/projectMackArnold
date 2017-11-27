@@ -1,6 +1,8 @@
 package edu.matc.controller;
 
 import edu.matc.persistence.CarsHibDao;
+import edu.matc.persistence.RouteDao;
+import edu.matc.persistence.UserHibernateDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,6 +25,9 @@ public class MyProfile extends HttpServlet {
 
         CarsHibDao carsHib = new CarsHibDao();
         req.setAttribute("cars", carsHib.getAllCars());
+
+        RouteDao daoRoute = new RouteDao();
+        req.setAttribute("routes", daoRoute.getAllRoutes());
 
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("JSP/profile.jsp");

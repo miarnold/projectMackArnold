@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * The type Google maps.
+ */
 @WebServlet (
         urlPatterns = {"/GoogleMaps"}
 )

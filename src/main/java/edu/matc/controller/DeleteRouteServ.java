@@ -18,6 +18,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Delete route serv.
+ */
 @WebServlet (
         urlPatterns = {"/DeleteRouteServ"}
 )

@@ -12,10 +12,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * The type Route dao.
+ */
 public class RouteDao {
     private final Logger log = Logger.getLogger(this.getClass());
 
 
+    /**
+     * Gets all routes.
+     *
+     * @return the all routes
+     */
     public List<Routes> getAllRoutes() {
         List<Routes> routes = new ArrayList<Routes>();
         Session session = null;
@@ -32,6 +40,11 @@ public class RouteDao {
         return routes;
     }
 
+    /**
+     * Delete route.
+     *
+     * @param routeId the route id
+     */
     public void deleteRoute(int routeId){
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -48,6 +61,12 @@ public class RouteDao {
         }
     }
 
+    /**
+     * Add route routes.
+     *
+     * @param route the route
+     * @return the routes
+     */
     public Routes addRoute(Routes route) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -65,6 +84,11 @@ public class RouteDao {
         return route;
     }
 
+    /**
+     * Update route.
+     *
+     * @param route the route
+     */
     public void updateRoute(Routes route) {
         Transaction transaction = null;
         Session session = null;
@@ -88,6 +112,12 @@ public class RouteDao {
         }
     }
 
+    /**
+     * Select route routes.
+     *
+     * @param routeId the route id
+     * @return the routes
+     */
     public Routes selectRoute(int routeId) {
         Routes route = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();

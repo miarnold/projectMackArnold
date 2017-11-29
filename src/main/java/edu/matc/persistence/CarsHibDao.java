@@ -11,10 +11,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * The type Cars hib dao.
+ */
 public class CarsHibDao {
     private final Logger log = Logger.getLogger(this.getClass());
 
 
+    /**
+     * Gets all cars.
+     *
+     * @return the all cars
+     */
     public List<Cars> getAllCars() {
         List<Cars> cars = new ArrayList<Cars>();
         Session session = null;
@@ -31,6 +39,11 @@ public class CarsHibDao {
         return cars;
     }
 
+    /**
+     * Delete car.
+     *
+     * @param carId the car id
+     */
     public void deleteCar(int carId){
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -47,6 +60,12 @@ public class CarsHibDao {
         }
     }
 
+    /**
+     * Add car cars.
+     *
+     * @param car the car
+     * @return the cars
+     */
     public Cars addCar(Cars car) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -66,6 +85,11 @@ public class CarsHibDao {
         return car;
     }
 
+    /**
+     * Update car.
+     *
+     * @param car the car
+     */
     public void updateCar(Cars car) {
         Transaction transaction = null;
         Session session = null;
@@ -89,6 +113,12 @@ public class CarsHibDao {
         }
     }
 
+    /**
+     * Select car cars.
+     *
+     * @param carId the car id
+     * @return the cars
+     */
     public Cars selectCar(int carId) {
         Cars car = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();

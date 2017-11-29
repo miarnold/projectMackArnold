@@ -9,13 +9,33 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * The type User hibernate dao test.
+ */
 public class UserHibernateDaoTest {
     private final Logger logger = Logger.getLogger(this.getClass());
+    /**
+     * The User dao.
+     */
     UserHibernateDao userDao;
+    /**
+     * The User.
+     */
     User user;
+    /**
+     * The List of users.
+     */
     int listOfUsers;
+    /**
+     * The List.
+     */
     List<User> list;
 
+    /**
+     * Sets up.
+     *
+     * @throws Exception the exception
+     */
     @Before
     public void setUp() throws Exception {
         userDao = new UserHibernateDao();
@@ -24,6 +44,12 @@ public class UserHibernateDaoTest {
 
 
     }
+
+    /**
+     * Gets all users test.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void getAllUsersTest() throws Exception {
         List<User> users = userDao.getAllUsers();
@@ -31,6 +57,11 @@ public class UserHibernateDaoTest {
     }
 
 
+    /**
+     * Select user test.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void selectUserTest() throws Exception {
         user = userDao.selectUser(1);
@@ -39,6 +70,11 @@ public class UserHibernateDaoTest {
     }
 
 
+    /**
+     * Update user test.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void updateUserTest() throws Exception {
         listOfUsers = userDao.getAllUsers().size();
@@ -52,13 +88,20 @@ public class UserHibernateDaoTest {
     }
 
 
-
+    /**
+     * Delete user test.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void deleteUserTest() throws Exception {
         userDao.deleteUser(5);
         assertEquals("Incorrect size of results", listOfUsers - 1, userDao.getAllUsers().size());
     }
 
+    /**
+     * Add user test.
+     */
     @Test
     public void addUserTest() {
         user = new User(8,"Dena", "cool","Dena","Arnold","booger@me.com");

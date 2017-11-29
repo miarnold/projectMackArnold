@@ -10,11 +10,19 @@ import org.hibernate.Transaction;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type User role hib dao.
+ */
 public class userRoleHibDao {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
 
+    /**
+     * Gets all roles.
+     *
+     * @return the all roles
+     */
     public List<UserRole> getAllRoles() {
         List<UserRole> roles = new ArrayList<UserRole>();
         Session session = null;
@@ -33,6 +41,11 @@ public class userRoleHibDao {
     }
 
 
+    /**
+     * Delete roles.
+     *
+     * @param role_id the role id
+     */
     public void deleteRoles(int role_id){
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -50,6 +63,12 @@ public class userRoleHibDao {
     }
 
 
+    /**
+     * Select role user role.
+     *
+     * @param role_id the role id
+     * @return the user role
+     */
     public UserRole selectRole(int role_id) {
         UserRole role = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -68,8 +87,11 @@ public class userRoleHibDao {
     }
 
 
-
-
+    /**
+     * Update role.
+     *
+     * @param role the role
+     */
     public void updateRole(UserRole role) {
         Transaction transaction = null;
         Session session = null;
@@ -93,6 +115,12 @@ public class userRoleHibDao {
         }
     }
 
+    /**
+     * Add role user role.
+     *
+     * @param role the role
+     * @return the user role
+     */
     public UserRole addRole(UserRole role) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;

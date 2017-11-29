@@ -14,6 +14,9 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+/**
+ * The type Sign up.
+ */
 @WebServlet (
         urlPatterns = {"/Sign-Up"}
 )

@@ -11,10 +11,14 @@ import org.hibernate.criterion.Restrictions;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type User hibernate dao.
+ */
 public class UserHibernateDao {
     private final Logger log = Logger.getLogger(this.getClass());
 
-    /** Return a list of all users
+    /**
+     * Return a list of all users
      *
      * @return All users
      */
@@ -36,6 +40,11 @@ public class UserHibernateDao {
     }
 
 
+    /**
+     * Delete user.
+     *
+     * @param id the id
+     */
     public void deleteUser(int id){
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;
@@ -53,6 +62,12 @@ public class UserHibernateDao {
     }
 
 
+    /**
+     * Select user user.
+     *
+     * @param Id the id
+     * @return the user
+     */
     public User selectUser(int Id) {
         User user = null;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
@@ -71,9 +86,11 @@ public class UserHibernateDao {
     }
 
 
-
-
-
+    /**
+     * Update user.
+     *
+     * @param user the user
+     */
     public void updateUser(User user) {
         Transaction transaction = null;
         Session session = null;
@@ -97,6 +114,12 @@ public class UserHibernateDao {
         }
     }
 
+    /**
+     * Add user user.
+     *
+     * @param user the user
+     * @return the user
+     */
     public User addUser(User user) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = null;

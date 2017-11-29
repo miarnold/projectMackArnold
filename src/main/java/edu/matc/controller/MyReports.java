@@ -13,6 +13,9 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
+/**
+ * The type My reports.
+ */
 @WebServlet (
         urlPatterns = {"/MyReports"}
 )

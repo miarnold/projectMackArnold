@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * The type Faq.
+ */
 @WebServlet (
         urlPatterns = {"/FAQ"}
 )

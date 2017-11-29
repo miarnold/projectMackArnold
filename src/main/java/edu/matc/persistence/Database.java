@@ -12,7 +12,6 @@ import java.util.Properties;
  *
  * @author pwaite
  */
-
 public class Database {
 
     // create an object of the class Database
@@ -42,15 +41,30 @@ public class Database {
 
     }
 
-    // get the only Database object available
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
+// get the only Database object available
     public static Database getInstance() {
         return instance;
     }
 
+    /**
+     * Gets connection.
+     *
+     * @return the connection
+     */
     public Connection getConnection() {
         return connection;
     }
 
+    /**
+     * Connect.
+     *
+     * @throws Exception the exception
+     */
     public void connect() throws Exception {
         if (connection != null)
             return;
@@ -65,6 +79,9 @@ public class Database {
         connection = DriverManager.getConnection(url, properties.getProperty("username"),  properties.getProperty("password"));
     }
 
+    /**
+     * Disconnect.
+     */
     public void disconnect() {
         if (connection != null) {
             try {

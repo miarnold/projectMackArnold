@@ -16,6 +16,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Delete car serv.
+ */
 @WebServlet (
         urlPatterns = {"/DeleteCarServ"}
 )

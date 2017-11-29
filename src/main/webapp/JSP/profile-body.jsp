@@ -2,7 +2,7 @@
 <div class="col-sm-8 text-middle">
     <p>Welcome to Your Profile</p>
     <div class="well">
-       <p>Hello (Get it working so the current user name logged in shows up here)</p>
+       <p>Hello ${name}</p>
         <p>here you can see your routes and choose which ones to delete here, but you cant update the route, just make a new one</p>
     </div>
     <form action="DeleteRouteServ" method="POST">

@@ -29,6 +29,8 @@ public class MyProfile extends HttpServlet {
         RouteDao daoRoute = new RouteDao();
         req.setAttribute("routes", daoRoute.getAllRoutes());
 
+        req.setAttribute("name",userNameOfCurrentUser);
+
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("JSP/profile.jsp");
         dispatcher.forward(req, resp);

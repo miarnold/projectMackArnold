@@ -3,6 +3,7 @@ package edu.matc.controller;
 import edu.matc.entity.Routes;
 import edu.matc.persistence.CarsHibDao;
 import edu.matc.persistence.RouteDao;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,6 +22,7 @@ import java.text.DecimalFormat;
 )
 
 public class MyReports extends HttpServlet {
+    private final Logger log = Logger.getLogger(this.getClass());
 
 
     @Override
@@ -60,8 +62,15 @@ public class MyReports extends HttpServlet {
         //double cityMPG = Double.parseDouble(addRoute.getMpgCity());
         //double highMPG = Double.parseDouble(addRoute.getMpgHigh());
         if (addRoute.getMpgCity() != null && addRoute.getMpgHigh() != null) {
+            log.info("city miles:" + addRoute.getNumberOfCityMiles());
+            log.info("city mpg: " + Double.parseDouble(addRoute.getMpgCity()));
+            log.info("highwayMiles: " + addRoute.getNumberOfHighwayMiles());
+            log.info("highway mpg: " + Double.parseDouble(addRoute.getMpgHigh()));
+            log.info("gas price: "  + addRoute.getGasPrice());
             double totalMoney = (((addRoute.getNumberOfCityMiles() / Double.parseDouble(addRoute.getMpgCity())) * addRoute.getGasPrice()) + ((addRoute.getNumberOfHighwayMiles() / Double.parseDouble(addRoute.getMpgHigh())) * addRoute.getGasPrice()));
+            log.info(totalMoney);
             decimalFormat.format(totalMoney);
+            log.info(totalMoney);
             String totalMoneyString = String.valueOf(totalMoney);
             addRoute.setTotal(totalMoneyString);
         }

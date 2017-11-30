@@ -30,8 +30,6 @@ public class CarsServ extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Cars addCar = new Cars();
-        User user = new User();
-        UserHibernateDao userDao = new UserHibernateDao();
         CarsHibDao carsHib = new CarsHibDao();
         req.setAttribute("cars", carsHib.getAllCars());
         String userNameOfCurrentUser = req.getRemoteUser();

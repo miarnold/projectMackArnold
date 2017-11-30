@@ -32,7 +32,7 @@ public class DeleteCarServ extends HttpServlet {
 
 
         CarsHibDao carHib = new CarsHibDao();
-        Cars car = new Cars();
+
 
         int id = Integer.parseInt(req.getParameter("checkbox"));
 

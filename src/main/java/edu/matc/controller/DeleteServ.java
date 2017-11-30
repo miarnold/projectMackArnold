@@ -32,7 +32,7 @@ public class DeleteServ extends HttpServlet {
 
 
         UserHibernateDao hibDao = new UserHibernateDao();
-        User user = new User();
+
 
         int id = Integer.parseInt(req.getParameter("checkbox"));
 

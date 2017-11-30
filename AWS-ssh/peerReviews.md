@@ -29,11 +29,11 @@
   |**Web Service/API integration**|Evaluate the service/api integration, for example: <li> Which service/api is implemented? <li>How is  error handling of the service implemented? For example, what happens if the service is not available?| |
   ||Other comments/notes?| |
   |**Independent research topic**| What is the independent research topic?| |
-  ||Is the independent research topic/technique implemented in the project?| |
+  ||Is the independent research topic/technique implemented in the project?| code quality plug in. this is implemented and everything is working and looks good! |
   ||Other comments/notes?| |
   |**Deployment**| Has the application been successfully deployed to AWS or another hosting service?| |
-  ||Is the hosted application fully functioning?| |
-  ||Other comments/notes?| |
+  ||Is the hosted application fully functioning?| yes this is hosted and everything is working on aws. great work! |
+  ||Other comments/notes?| great work! |
   
   
 

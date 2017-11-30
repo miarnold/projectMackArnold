@@ -10,6 +10,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
+ *
  * The type User hibernate dao test.
  */
 public class UserHibernateDaoTest {

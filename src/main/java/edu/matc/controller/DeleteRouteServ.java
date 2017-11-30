@@ -34,7 +34,7 @@ public class DeleteRouteServ extends HttpServlet {
 
 
         RouteDao dao = new RouteDao();
-        Routes route = new Routes();
+
 
         int id = Integer.parseInt(req.getParameter("checkbox"));
 

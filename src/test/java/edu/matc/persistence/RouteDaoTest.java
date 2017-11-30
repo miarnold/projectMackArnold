@@ -59,7 +59,7 @@ public class RouteDaoTest {
      */
     @Test
     public void deleteRoute() throws Exception {
-        routeDao.deleteRoute(7);
+        routeDao.deleteRoute(9);
         assertEquals("Incorrect size of results", listOfRoutes - 1, routeDao.getAllRoutes().size());
     }
 

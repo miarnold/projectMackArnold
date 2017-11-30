@@ -59,9 +59,9 @@ public class CarsHibDaoTest {
      */
     @Test
     public void selectcarsTest() throws Exception {
-        carObject = carDao.selectCar(1);
+        carObject = carDao.selectCar(2);
         assertNotNull(carObject);
-        assertEquals("wrong car selected", 1, carObject.getCar_id());
+        assertEquals("wrong car selected", 2, carObject.getCar_id());
     }
 
     /**

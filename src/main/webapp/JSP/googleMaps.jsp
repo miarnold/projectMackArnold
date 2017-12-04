@@ -4,4 +4,5 @@
 
 <%@include file="sidebar-google.jsp"%>
 <%@include file="google-body.jsp"%>
+<%@include file="right-google-sidebar.jsp"%>
 <%@include file="footer-google.jsp"%>

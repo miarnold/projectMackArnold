@@ -19,8 +19,10 @@
     <br/>
     <br/>
     <br/>
-    <img src="Images/commuter.jpg" width="400" height="530">
-
+    <p>here is a link to a funny commuting meme, since intellij doesnt want to show my picture...</p>
+    <a href="https://i.pinimg.com/564x/8c/ef/59/8cef599ab6a024020fe529b8f68b0023.jpg">Commuting meme</a>
+    <br/>
+    <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/206857425-Image-files-not-displaying">click here to see picture problem</a>
 
 
 </div>

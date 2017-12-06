@@ -14,12 +14,12 @@
     </ol>
     <br/>
     <br/>
-    <p>Dont you think this is the worst Index you have ever seen by a almost graduated Web Developer</p>
+    <p>Isn't this Index ugly for an almost graduated Web Developer</p>
 
     <br/>
     <br/>
     <br/>
-    <img src="Images/commute.jpeg">
+    <img src="Images/commuter.jpg" width="400" height="530">
 
 
 

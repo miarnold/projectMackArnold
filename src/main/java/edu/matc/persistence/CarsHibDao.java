@@ -54,7 +54,7 @@ public class CarsHibDao {
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();
-            e.printStackTrace();
+            log.error("error deleting car" + e);
         }finally {
             session.close();
         }
@@ -78,7 +78,7 @@ public class CarsHibDao {
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();
-            e.printStackTrace();
+            log.error("error adding car" + e);
         }finally {
             session.close();
         }
@@ -130,7 +130,7 @@ public class CarsHibDao {
             transaction.commit();
         }catch (HibernateException e) {
             if (transaction!=null) transaction.rollback();
-            e.printStackTrace();
+            log.error("error selecting car" + e);
         }finally {
             session.close();
         }

@@ -58,7 +58,7 @@ public class userRoleHibDaoTest {
      *
      * @throws Exception the exception
      */
-    @Ignore
+
     @Test
     public void updateRoleTest() throws Exception {
         listOfRoles = roleDao.getAllRoles().size();

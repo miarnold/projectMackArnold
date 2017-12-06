@@ -2,7 +2,7 @@
 </div>
 </div>
 <footer class="container-fluid text-center">
-    <p>This is the bottom of the page! Commuters Reilef &#x2122;</p>
+    <p>Thanks for reading to the bottom! Commuters Reilef &#x2122;</p>
 </footer>
 
 </html>

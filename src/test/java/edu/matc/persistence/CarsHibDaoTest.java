@@ -60,6 +60,7 @@ public class CarsHibDaoTest {
     @Test
     public void selectcarsTest() throws Exception {
         carObject = carDao.selectCar(2);
+        logger.info("The car you selected is: " + carObject.getCarName());
         assertNotNull(carObject);
         assertEquals("wrong car selected", 2, carObject.getCar_id());
     }

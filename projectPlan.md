@@ -82,18 +82,18 @@ more detail.
 - [X] Work more on project
 - [X] Commit, pull, push
 ### Week 13
-- [ ] Time log entries
-- [ ] Work more on project
-- [ ] Commit, pull, push
-- [ ] Get ready because I present next week
+- [X] Time log entries
+- [X] Work more on project
+- [X] Commit, pull, push
+- [X] Get ready because I present next week
 ### Week 14
-- [ ] Time log entries
-- [ ] Create final presentation
-- [ ] Commit, pull, push
+- [X] Time log entries
+- [X] Create final presentation
+- [X] Commit, pull, push
 ### Week 15
-- [ ] Final Presentation
-- [ ] Time log entries
-- [ ] Commit, pull, push
+- [X] Final Presentation
+- [X] Time log entries
+- [X] Commit, pull, push
 ### Week 16
 - [ ] Time log entries
 - [ ] Commit, pull, push

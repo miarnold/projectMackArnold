@@ -40,6 +40,7 @@
 | 11/22/17 | finally got the add reports work and got the delete a user to work | 8 |   |
 | 11/27/17 | trying to get it where you can delete a car from any page on the right side bar | 3 |   |
 | 11/29/17 | got the delete to work for reports and cars, got reports to show in the profile and got the dynamic name to show up on the profile. | 10 |   |
-
+| 11/31/17 | finishing up everything for the final presentation | 2 |   |
+| 12/06/17 | finally got add user to work!!! | 10 | got ready for the final presentation and made the presentation and video  |
 
 
